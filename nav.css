@@ -1,0 +1,36 @@
+div.container a {
+    font: 20px ;
+    margin: 0px 10px;
+    position: relative;
+}
+
+/*Set an empty text left and right of the links to create the border bar*/
+.BorderBar a:before, .BorderBar a:after
+{
+    position: absolute;
+    opacity: 0.5;
+    height: 100%;
+    width: 1px;
+    content: "";
+    background: #000;
+    transition: all 0.4s;
+}
+
+.BorderBar a:before
+{
+    left: 0px;
+    top: 0px;
+}
+
+.BorderBar a:after
+{
+    right: 0px;
+    bottom: 0px;
+}
+
+.BorderBar a:hover:before, .BorderBar a:hover:after
+{
+    opacity: 1;
+    height: 2.5px;
+    width: 100%;
+}
