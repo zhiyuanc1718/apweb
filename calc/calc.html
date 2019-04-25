@@ -18,18 +18,20 @@
     <link rel="stylesheet" href="custom.css">
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://getbootstrap.com.vn/examples/equal-height-columns/equal-height-columns.css" />
     <script src="script.js"></script>
+
 </head>
 
 <body data-spy="scroll" data-target=".navbar">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#main">AP Calulus AB</a>
-            <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand js-scroll-trigger" href="#main">AP Calculus AB</a>
+            <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span></button>
 
-            <div class="container collapse navbar-collapse" id="navbarResponsive">
+            <div class="container collapse navbar-collapse" id="navbar">
                 <div class="navbar-nav ml-auto my-2 my-lg-0">
                     <a class="nav-link js-scroll-trigger" href="#exam">Course</a>
                     <a class="nav-link js-scroll-trigger" href="#lim">Limits</a>
@@ -47,75 +49,91 @@
     </header>
 
     <!-- course description -->
-    <div class="container-fluid" id="exam">
-        <div class="jumbotron">
-            <h1>Course Description</h1>
+    <div class="container-fluid" id="exam"><br>
+        <div class="label">
+            <h2>Course Description</h2>
         </div>
         <div class="container">
-            <div class="row">
+            <div class="row row-eq-height">
                 <div class="col-md-6">
-                    <p>Prerequisite</p>
-                    <p>AP Calculus requires you to understand concepts across geometry, algebra and trigonometry.</p>
+                    <h4>Prerequisite</h4>
+                    <p>AP Calculus requires you to understand concepts across geometry, algebra and trigonometry. You should memorize the unit circle and formulas of different shapes (spheres, trapezoids etc).</p>
+                    <ul class="list">
+                        <li>Surface Areas</li>
+                        <li>Areas</li>
+                        <li>Volumes</li>
+                    </ul>
                 </div>
                 <div class="col-md-6">
-                    <p>AP Exam</p>
+                    <h4>AP Exam</h4>
                     <p>The exam is given within the first weeks of May. You have September to May to prepare for this exam. Receiving a passing score on the exam might give you college credits. Scores range from 1 to 5. A 3 is considered a passing score.</p>
+                    <ul class="list">
+                        <li><strong>2019 May 14 Tuesday</strong> Exam</li>
+                        <li><strong>2020 May 5 Tuesday</strong> Exam</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 
+    <hr>
 
     <!-- Limits Intro -->
-    <div class="container-fluid" id="lim">
-        <div class="jumbotron">
-            <h1>Limits</h1>
+    <div class="container-fluid" id="lim">&nbsp
+        <div class="label">
+            <h2>Limits</h2>
         </div>
         <div class="container">
-            <div class="row">
+            <div class="row row-eq-height">
                 <div class="col-md-6">
-                    <p>Image</p>
+                    <h4>Limits Notation</h4>
+                    <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c3f174c16cc9e61932ecc7eb71b27a4f10a44fc9" alt="Limits-Image">
                 </div>
                 <div class="col-md-6">
-                    <p>What does a Limit mean for a function?</p>
+                    <h4>What exactly are Limits?</h4>
                     <p>The y value that a function approaches when it reaches a certain x value. This is the expected y value for a function, the value does not have to be defined.</p>
                 </div>
             </div>
         </div>
     </div>
 
+    <hr>
 
     <!-- Derivatives Intro -->
-    <div class="container-fluid" id="dy">
-        <div class="jumbotron" >
-            <h1>Derivatives</h1>
+    <div class="container-fluid" id="dy">&nbsp
+        <div class="label">
+            <h2>Derivatives</h2>
         </div>
         <div class="container">
-            <div class="row">
+            <div class="row row-eq-height">
                 <div class="col-md-6">
-                    <p>Image</p>
+                    <h4>Disguised Derivatives</h4>
+                    <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9315f1516ee5847107808697e43693d91abfc6e8">
                 </div>
                 <div class="col-md-6">
-                    <p>What are Derivatives? </p>
-                    <p>The slope of the Tangent line at a specific point is called the derivative. In other words, it is the rate of change at an instantaneous moment. Unlike the average rate of change, finding the slope at one point requires more work,
-                        and this is why we need to learn some calculus to find the value.</p>
+                    <h4>What are Derivatives? </h4>
+                    <p>The slope of the Tangent line at a specific point is called the derivative. In other words, it is the rate of change at an instantaneous moment. Unlike the average rate of change between two points on a graph, finding the slope at
+                        one point requires more work, and this is why we need to learn some calculus to find the value.</p>
                 </div>
             </div>
         </div>
     </div>
 
+    <hr>
+
     <!-- Integrals Intro -->
-    <div class="container-fluid" id="int">
-        <div class="jumbotron" >
-            <h1>Integrals</h1>
+    <div class="container-fluid" id="int">&nbsp
+        <div class="label">
+            <h2>Integrals</h2>
         </div>
         <div class="container">
-            <div class="row">
+            <div class="row row-eq-height">
                 <div class="col-md-6">
-                    <p>Image</p>
+                    <h4>General Integral</h4>
+                    <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a433aea7c0c8b43e6387aa906e7d855c1cb1f207">
                 </div>
                 <div class="col-md-6">
-                    <p>How are Integrals different? Are they something new again?</p>
+                    <h4>How are Integrals different?</h4>
                     <p>Integrals help us determine the area under a curve. While derivatives find the change, integrals are antiderivatives: they find what was being differentiated. These terms might sound fancy or confusing but Calculus is here to help
                         you understand.</p>
                 </div>
