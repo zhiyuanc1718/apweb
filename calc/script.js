@@ -2,14 +2,12 @@ $(function() {
 
     function show() {
         if ($(window).scrollTop()) {
-            scroll = true;
             $(".navbar").addClass('bg-light')
             if ($(document).width() + 15 >= 992) {
                 $("div.collapse").addClass('BorderBar')
             }
         }
         else {
-            scroll = false;
             $(".navbar").removeClass('bg-light')
             $("div.collapse").removeClass('BorderBar')
         }
@@ -39,7 +37,7 @@ $(function() {
             $("div.collapse").removeClass('BorderBar')
         }
         else {
-            $("div.collapse").addClass('BorderBar')
+            show();
         }
     });
 });
