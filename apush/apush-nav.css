@@ -1,0 +1,29 @@
+/* Hover over navlink to generate 2 border bars top and bottom  */
+.borderX a:before, .borderX a:after
+{
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 2px;
+    content: '';
+    background: blue;
+    transition: all 0.4s;
+}
+
+.borderX a:before
+{
+    left: 0px;
+    top: 0px;
+}
+
+.borderX a:after
+{
+    right: 0px;
+    bottom: 0px;
+}
+
+.borderX a:hover:before, .borderX a:hover:after
+{
+    opacity: 1;
+    width: 100%;
+}
