@@ -1,0 +1,30 @@
+/*Hover over the link within the navbar will trigger animation to display a top and bottom border*/
+.BorderBar a:before, .BorderBar a:after
+{
+    position: absolute;
+    left: 0px;
+    opacity: 0;
+    height: 2px;
+    width: 100%;
+    content: "";
+    background: #000;
+    transition: all 0.4s;
+}
+
+.BorderBar a:before
+{
+    top: 0px;
+    transform: translateY(-10px);
+}
+
+.BorderBar a:after
+{
+    bottom: 0px;
+    transform: translateY(10px);
+}
+
+.BorderBar a:hover:before, .BorderBar a:hover:after
+{
+    opacity: 1;
+    transform: translateY(0px);
+}
