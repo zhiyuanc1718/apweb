@@ -1,0 +1,38 @@
+/*Note that all of the following css applies to all webpages
+Consider putting down css here ONLY for consistent format*/
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+
+/*main image*/
+#main {
+    display: table;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.center {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+/*navbar*/
+.collapse a {
+    font: 20px ;
+    margin: 0px 10px;
+    position: relative;
+}
+
+.bg-light {
+    box-shadow: 1px 1px 15px 1px grey;
+}
+
+
+
