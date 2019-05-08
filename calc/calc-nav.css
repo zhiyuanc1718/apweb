@@ -1,5 +1,5 @@
-/*Hover over the link within the navbar will trigger animation to display a top and bottom border*/
-.BorderBar a:before, .BorderBar a:after
+/*Hover over the link within the navbar will trigger animation to display a top and bottom animate*/
+.animate a:before, .animate a:after
 {
     position: absolute;
     left: 0px;
@@ -11,19 +11,19 @@
     transition: all 0.4s;
 }
 
-.BorderBar a:before
+.animate a:before
 {
     top: 0px;
     transform: translateY(-10px);
 }
 
-.BorderBar a:after
+.animate a:after
 {
     bottom: 0px;
     transform: translateY(10px);
 }
 
-.BorderBar a:hover:before, .BorderBar a:hover:after
+.animate a:hover:before, .animate a:hover:after
 {
     opacity: 1;
     transform: translateY(0px);
