@@ -2,3 +2,32 @@
     background: url('../img/delaware.jpg') no-repeat center;
     background-size: cover;
 }
+
+body {
+    background-color: #add8e6;
+}
+
+h6 {
+    padding: 30px;
+}
+
+#co {
+    background-color: #9bd5ff;
+}
+
+
+#c1 {
+    background-color: #aabfff;
+}
+
+@media (max-width: 992px) {}
+
+#cc {
+    padding-top: 10px;
+}
+
+#rm {
+    padding: 92.2px;
+
+}
+
