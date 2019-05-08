@@ -8,7 +8,7 @@ body {
 }
 
 h6 {
-    padding: 30px;
+    padding: 20px;
 }
 
 #co {
@@ -20,14 +20,59 @@ h6 {
     background-color: #aabfff;
 }
 
-@media (max-width: 992px) {}
-
-#cc {
-    padding-top: 10px;
+@media (max-width: 992px) {
+    .display {
+        height: 33.33%;
+    }
+    .center>h1 {
+        font-size: 7vw;
+    }
 }
 
-#rm {
-    padding: 92.2px;
-
+@media (min-width: 992px) {
+    .display {
+        height: 100%;
+    }
+    .center>h1 {
+        font-size: 70px;
+    }
+    .primary-label>h1 {
+        font-size: 40px !important;
+    }
 }
 
+@media (max-width: 768px) {
+    .primary-label {
+        padding: 20px 5px 10px 5px !important;
+        margin: 20px 5px 10px 5px !important;
+    }
+    p {
+        margin: 10px !important;
+    }
+    .col-md-6 {
+        margin-bottom: 5px;
+        padding: 10px;
+    }
+}
+
+@media (min-width:768px) {
+    .col-md-6 {
+        margin-bottom: 15px;
+        padding: 20px;
+    }
+}
+
+/*Extremely SMALL (such as phones)*/
+
+@media (max-width: 475px) {
+    .equation {
+        font-size: 6px !important;
+    }
+    .jumbotron{
+        margin-bottom: 0em !important;
+    }
+    .primary-label{
+        padding: 0px;
+        margin: 0px;
+    }
+}
