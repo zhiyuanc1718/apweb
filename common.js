@@ -1,15 +1,18 @@
-
 $(function() {
 
     function show() {
         if ($(window).scrollTop()) {
             $(".navbar").addClass('bg-light')
+            if ($(document).width() + 15 >= 992) {
+                $("div.collapse").addClass('animate')
+            }
         }
         else {
             $(".navbar").removeClass('bg-light')
+            $("div.collapse").removeClass('animate')
         }
     }
-
+    
     // If the scrollbar is moved, fade in navbar background
     show();
     $(document).scroll(function() {
@@ -22,22 +25,19 @@ $(function() {
             $(".navbar").addClass('bg-light')
         }
     });
-
+    
     //collapse the expanded navbar upon clicking a link (for screen size smaller than large 992px)
     $("a.nav-link").click(function() {
         $("#navbar").collapse('hide');
     });
-
-
-    $('.collapser').click(function() {
-        var disp = $(this).html()
-        var part = disp.substring(0, 4);
-        var rem = disp.substring(5, disp.length);
-        if (part == "Show") {
-            $(this).html("Hide " + rem);
+    
+    //a transition from smaller screen size to larger ones 
+    $(window).resize(function() {
+        if ($(window).width() < 992) {
+            $("div.collapse").removeClass('animate')
         }
         else {
-            $(this).html("Show " + rem);
+            show();
         }
     });
 });

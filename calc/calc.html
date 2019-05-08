@@ -15,12 +15,654 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+    <!-- External Stylesheets/JS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="http://getbootstrap.com.vn/examples/equal-height-columns/equal-height-columns.css" />
 
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="calc.css">
+    <link rel="stylesheet" href="calc-nav.css">
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+    <!--The common file removes repeated css/js -->
+    <link rel="stylesheet" href="../common.css">
+
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" style="background-color: #FBEEC1">
+
+    <!------------ centered main page background image -------->
+    <div class="container-fluid" style="height:100%;" id="Main">
+        <div class="row" style="height:100%;">
+            <div class="col-lg-4 display" style="background-color:lightblue">
+                <div>
+                    <h1>Limits</h1>
+                    <br>
+                    <a class="btn btn-info limit" href="#limits" role="button">Learn</a>
+                </div>
+            </div>
+            <div class="col-lg-4 display" style="background-color: #E27D60">
+                <div>
+                    <h1>Derivatives</h1>
+                    <br>
+                    <a class="btn btn-info dy" href="#dy" role="button">Learn</a>
+                </div>
+            </div>
+            <div class="col-lg-4 display" style="background-color: #DAAD86">
+                <div>
+                    <h1>Integrals</h1>
+                    <!--<h3 class="equation">$${\displaystyle x(b)-x(a)=\int _{a}^{b}v(t)\,dt}$$</h3>-->
+                    <br>
+                    <a class="btn btn-info int" href="#int" role="button">Learn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------------Navigation Bar-------------->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3" id="Nav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#Main"></a>
+            <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span></button>
+            
+            <div class="container collapse navbar-collapse bright" id="navbar">
+                <div class="navbar-nav ml-auto my-2 my-lg-0 nav-content"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-------------------------Modals------------------->
+    <div class="modal" id="fx">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Graph</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body [CHECK JS]-->
+                <div class="modal-body"></div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------Actual Content---------------------->
+    <div id="limits" class="collapse">
+
+        <!---------Limits Basics [U1]------------->
+        <hr id="u1" style="visibility:hidden;">
+        <div class="container-fluid">
+            <div class="primary-label">
+                <h1 class="jumbotron" style="background-color: #659BDB">Limits Basics</h1>
+            </div>
+            <div class="container">
+                <div class="row row-eq-height">
+                    <div class="col-md-6">
+                        <h3><u>Direct Substitution</u></h3>
+                        <p class="equation">$$let\ f\left(x\right) = {\frac {x^{2}-1}{x-1}}$$</p>
+                        <p class="equation">$$\lim _{x\to 3}f\left(x\right) =4$$</p>
+                        <p>Read this as "The Limit as X approaches 3 for the function f(x)" </p>
+                        <p class="equation">$$\lim _{x\to 3}f\left(x\right) = {\frac {3^{2}-1}{3-1}} = 4$$</p>
+                        <button type="button" class="btn btn-primary g1" data-toggle="modal" data-target="#fx">Show Graph</button>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>How do we solve that limit?</h3>
+                        <p>Since a limit is the y value that a function approaches when it approaches a x value, simplify plug in the x value.</p>
+                        <p>When you plug in 3 for X, you get 8 on the numerator and 2 on the denominator. The Limit equals 4.</p>
+                        <p class="equation">$$\lim _{x\to 1}f\left(x\right) =2$$</p>
+                        <p>Note that when we simply plug in X = 1, we cannot divide by 0. We need to find another way to solve these limits.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3><u>Limit by Factorization</u></h3>
+                        <p class="equation">$$f\left(x\right) = {\frac {x^{2}-1}{x-1}}$$</p>
+                        <p class="equation">$$\lim _{x\to 1}f\left(x\right) =2$$</p>
+                        <p>How? Well, If you factor the numerator </p>
+                        <p class="equation">$$\lim _{x\to 1}f\left(x\right) = {\frac {(x+1)(x-1)}{x-1}}$$</p>
+                        <p>See the common factor of (x-1) ? We can cancel them out and then substitute 1 for X again</p>
+                        <p class="equation">$$\lim _{x\to 1}f\left(x\right) = x+1$$</p>
+                        <p class="equation">$$\lim _{x\to 1}f\left(x\right) = 1+1 = 2$$</p>
+                        <quote><strong>Note</strong>: Always attempt to factor if possible</quote>
+                    </div>
+                    <div class="col-md-6">
+                        <h3><u>Limit using Trigonometry</u></h3>
+                        <p class="equation">$$f\left(x\right) = {\frac {sin^{3}(x)cos(x)}{1-cos^{2}x}}$$</p>
+                        <p class="equation">$$\lim _{x\to 0}f\left(x\right) = ?$$</p>
+                        <p>Let's use direct substitution first and see what happens</p>
+                        <p class="equation">$$\lim _{x\to 0}f\left(x\right) = {\frac {sin^{3}(0)cos(0)}{1-cos^{2}(0)}} = {\frac {0}{0}}$$</p>
+                        <p>When you have 0/0, this is called the <span style="color:blue">Indeterminate form</span></p>
+                        <p>You should not make any conclusions about an answer when you approach 0/0</p>
+                        <p class="equation">$$[unit-circle]\ sin^{2}x + cos^{2}x = 1$$</p>
+                        <p class="equation">$${\frac {sin^{3}(0)cos(0)}{sin^{2}(0)}} = {sin(0)cos(0)} = 0$$</p>
+                        <quote><strong>Note</strong>: When dealing with trig functions, use your trig identities!</quote>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-------------LEFT RIGHT (U2)------------>
+        <hr id="u2" style="visibility:hidden;">
+        <div class="container-fluid">
+            <div class="primary-label">
+                <h1 class="jumbotron" style="background-color: #659BDB">One Sided Limits</h1>
+            </div>
+            <div class="container">
+                <div class="row row-eq-height">
+                    <div class="col-md-6">
+                        <h3><u>Left Hand</u></h3>
+                        <p class="equation">$$let\ f\left(x\right) = {\frac {1}{x}}$$</p>
+                        <p class="equation">$$\lim _{x\to 0^{-}}f\left(x\right)$$</p>
+                        <p>The - sign next to the 0 indicates that we are looking at the limit from only the left side. As we move towards the x value from the left, what is the limit?</p>
+                        <p><strong>Note</strong>: Consider graphing or picturing the graph in your head!</p>
+                        <button type="button" class="btn btn-primary g2" data-toggle="modal" data-target="#fx">Graph f(x)</button>
+                    </div>
+                    <div class="col-md-6">
+                        <h3><u>Right Hand</u></h3>
+                        <p class="equation">$$let\ f\left(x\right) = {\frac {1}{x}}$$</p>
+                        <p class="equation">$$\lim _{x\to 0^{+}}f\left(x\right)$$</p>
+                        <p>The + sign next to the 0 indicates that we are looking at the limit from only the right side. As we approach the x value from the right, what is the limit?</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3><u>Practice 1</u></h3>
+                        <p class="equation">$$let\ g\left(x\right) = {\frac{x-2}{\left|x-2\right|}}$$</p>
+                        <p class="equation">$$\lim _{x\to 2^{-}}g\left(x\right) = ?$$</p>
+                        <p>Think about it and Checkout the Answer or Graph</p>
+                        <button type="button" class="btn btn-primary g3" data-toggle="modal" data-target="#fx">Graph g(x)</button>
+                        <button class="btn btn-primary" data-toggle="collapse" href="#answer1" role="button" aria-expanded="false" aria-controls="collapseExample">Answer Explanation</button>
+                        <div class="collapse" id="answer1">
+                            <p>Using direct substitution, the limit becomes 0/0 which is what we want to avoid. Looking at g(x), the magnitude of the numerator and denominator are equal: (x-2) and |x-2| both contain "x-2"</p>
+                            <p>Without considering the absolute value, the limit would be 1.</p>
+                            <p class="equation">$$let\ r\left(x\right) = {\frac{x-2}{x-2}} = 1$$</p>
+                            <p>However, the absolute value brings the issue. We know as x approaches 2 from the left for x-2, the y value increases until it equals 0. <strong>Conclusion : x-2 is negative until x = 2</strong></p>
+                            <p>Remember that all absolute values are positive? so |x-2| is always positive until x = 2</p>
+                            <quote>Conclusion : the limit as g(x) approaches x = 2 from the left is -1 </quote>
+                            <p class="equation">$$\lim _{x\to 2^{-}}g\left(x\right) = -1 $$</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h3><u>Practice 2</u></h3>
+                        <p class="equation">$$let\ g\left(x\right) =\frac{x^2-4x}{\left|x-4\right|}$$</p>
+                        <p class="equation">$$\lim _{x\to 4^{+}}g\left(x\right) = ?$$</p>
+                        <p>Try to answer on your own</p>
+                        <button type="button" class="btn btn-primary g4" data-toggle="modal" data-target="#fx">Graph g(x)</button>
+                        <button class="btn btn-primary" data-toggle="collapse" href="#answer2" role="button" aria-expanded="false" aria-controls="collapseExample">Answer Explanation</button>
+                        <div class="collapse" id="answer2">
+                            <p>Using direct substitution, the limit becomes 0/0. Factoring g(x), we have x(x-4) as numerator and |x-4| as denominator.</p>
+                            <p>Without considering the absolute value, the limit would equal to x (in this case x = 4).</p>
+                            <p class="equation">$$let\ r\left(x\right) = {\frac{x(x-4)}{(x-4)}} = x$$</p>
+                            <p>We know as x approaches 4 from the right for x-4, the y value decreases until it equals 0. <strong>Conclusion : x-4 is positive until x = 4</strong></p>
+                            <p>All absolute values are positive, so |x-4| is always positive until x = 4</p>
+                            <quote>Conclusion : the limit as g(x) approaches x = 4 from the right is 1 times x which simply equals to whatever x is. </quote>
+                            <p class="equation">$$\lim _{x\to 4^{+}}g\left(x\right) = x = 4 $$</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--------------LIMIT INFINITY (U3)--------------->
+        <hr id="u3" style="visibility:hidden;">
+        <div class="container-fluid">
+            <div class="primary-label">
+                <h1 class="jumbotron" style="background-color: #659BDB">Limit at Infinity</h1>
+            </div>
+            <div class="container">
+                <div class="row row-eq-height">
+                    <div class="col-md-6">
+                        <h4>Introduction</h4>
+                        <p>When the limit approaches infinity for x, essentially, you are finding the horizontal asymptote (if there is one).</p>
+                        <p>Think of an exponential graph, the basic horizontal asymptote is y = 0. If we have a positive standard exponential graph,
+                        the horizontal asymptote is y = 0. So as x approaches negative infinity, we have a limit of 0.</p>
+                        <p class="equation">$$for\ f\left(x\right) = e^x$$</p>
+                        <p class="equation">$$\lim _{x\to -∞}f\left(x\right) = 0 $$</p>
+                        <p>There are a few tips to solving these limits. Always consider if x is approaching negative infinity or positive infinity.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Rule 1 : exponents</h4>
+                        <p>For now, let's focus only on positive infinity. for any non-polynomial function such as :</p>
+                        <p class="equation">$$let\ f\left(x\right) = {\frac {3x-2}{10x^2}}$$</p>
+                        <p>What is the limit as x approaches infinity ?</p>
+                        <p>Compare the function from the numerator to the denominator.</p>
+                        <p>Why is the limit 0 when denominator's function is larger in exponent? Well if we substitute infinity for x</p>
+                        <p class="equation">$$\lim _{x\to ∞}f\left(x\right) = {\frac {1}{∞}} $$</p>
+                        <h6>One in a billion is basically zero. </h6>
+                    </div>
+                </div>
+                <div class="row row-eq-height">
+                    <div class="col-md-6">
+                        <h4>Infinity Rule Summary</h4>
+                        <p>If denominator's exponent is larger, we approach a limit of 0</p>
+                        <p>If numerator's exponent is larger, the function increases without limits (limit Does Not Exist [DNE])</p>
+                        <p>I hope you ask "what if they are the same?" : the limit is based on the coefficients (shown below). </p>
+                        <p class="equation">$$\lim _{x\to ∞}{\frac {3x^{2}-1}{5x^{2}+x}} = {\frac {3}{5}}$$</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Practice</h4>
+                        <p class="equation">$$\lim _{x\to ∞}{\frac {2x^{e}-1}{2x^{-2}+5x}} = ?$$</p>
+                        <button class="btn btn-primary" data-toggle="collapse" href="#answer3" role="button" aria-expanded="false" aria-controls="collapseExample">Answer Explanation</button>
+                        <div class="collapse" id="answer3">
+                            <p>The answer is DNE or Limit Does Not Exist.</p>
+                            <p>The function just keeps on increasing approaching infinity (limitless)</p>
+                            <p>The numerator's main function is x to the e power. The denominator's exponent is -2 which is smaller than e (2.718.. Euler's number)
+                            Therefore, we conclude that the function approaches y = infinity as x approaches infinity.</p>
+                            <h6>Having a limit as infinity is the same as DNE.</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!---------------CONTINUITY (U4)-------------------->
+        <hr id="u4" style="visibility:hidden;">
+        <div class="container-fluid">
+            <div class="primary-label">
+                <h1 class="jumbotron" style="background-color: #659BDB">Continuity</h1>
+            </div>
+            <div class="container">
+                <div class="row row-eq-height">
+                    <div class="col-md-6">
+                        <h4>Continous Functions</h4>
+                        <p>When the function is defined at the point where the left hand and right hand limits meet one another, the function
+                        is then considered <strong>Continous</strong> at this point.</p>
+                        <p class="equation">$$f\left(c\right) = \lim _{x\to c^{+}}f\left(x\right) = \lim _{x\to c^{-}}f\left(x\right)$$</p>
+                        <p>If one of these do not equal, then the function is not continous at this point where x = c.</p>
+                        <p>When the left hand and right hand limit both equal one another (an actual number) then the simpler equation comes :</p>
+                        <p class="equation">$$f\left(c\right) = \lim _{x\to c}f\left(x\right)$$</p>
+                        <button type="button" class="btn btn-primary g5" data-toggle="modal" data-target="#fx">Continous Graph</button>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Discontinuity</h4>
+                        <p>What are the types of discontinuities?</p>
+                        <p>Removable discontinuity : The function becomes discontinuous due to the existence of a hole (undefined point). 
+                        The limit approaches the hole and the hole could be removed to bring continuity. </p>
+                        <p>Infinite (nonremovable) discontinuity : This type of discontinuity involves an asymptote which the function is undefined for this vertical asymptote. 
+                        The limit of the function will not exist at an asymptote (left and right limits can exist). </p>
+                        <p>Jump discontinuity : The function from the left approaches a different limit compared to the right hand’s limit. </p>
+                        <button type="button" class="btn btn-primary g6" data-toggle="modal" data-target="#fx">Example 1</button>
+                        <button type="button" class="btn btn-primary g7" data-toggle="modal" data-target="#fx">Example 2</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="dy" class="collapse">
+
+        <!---------Derivatives Basics [DU1]------------->
+        <hr id="du1" style="visibility:hidden;">
+        <div class="container-fluid">
+            <div class="primary-label">
+                <h1 class="jumbotron" style="background-color: #659BDB">Derivatives Basics</h1>
+            </div>
+            <div class="container">
+                <div class="row row-eq-height">
+                    <div class="col-md-6">
+                        <h3><u>Disguised Derivatives</u></h3>
+                        <p><strong>Note</strong> : Before learning derivatives, go learn limits.</p>
+                        <p><strong>Derivatives</strong> are slopes of tangent lines. The basic mathematical definition of a derivative is written in terms of limits:</p>
+                        <h5>The <strong>Difference Quotient</strong></h5>
+                        <p class="equation">$$\lim _{h\to 0}{\frac {f(x+h)-f(x)}{h}}$$</p>
+                        <p>In the definition, h represents the change in x [delta x]
+                        The derivative is based on an infinitesimal change (in other words, delta x or change in x value is zero)</p>
+                        <p>When we calculate slope with algebra, we use two points to form what we call a <strong>secant line</strong>. We take the change in Y and divide by the change in X. In calculus, we take the <strong>instantaneous slope</strong> which
+                            is the slope at one point. This can be done by drawing tangent lines, but we will calculate with calculus.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3><u>First Derivative</u></h3>
+                        <p>You want to find the derivative (slope) of a standard parabola.</p>
+                        <p class="equation">$$let\ q\left(x\right) = {x^{2}}$$</p>
+                        <p>notation : d/dx means to take the derivative with respect to variable x</p>
+                        <p class="equation">$${\frac {d}{dx}} q\left(x\right) = \lim _{h\to 0}{\frac {(x+h)^{2}-x^{2}}{h}}$$ </p>
+                        <p class="equation">$${\frac {(x+h)^{2}-x^{2}}{h}} = {\frac {x^{2}+2xh+h^{2}-x^{2}}{h}}$$</p>
+                        <p class="equation">$${\frac {d}{dx}} q\left(x\right) = \lim _{h\to 0}2x + h = 2x$$</p>
+                        <p>How is this useful? Well, if we are given any x value, we will know the slope at that point on the graph.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3><u>Power Rule</u></h3>
+                        <p>Using the difference quotient, find t'(x)</p>
+                        <p class="equation">$$let\ t\left(x\right) = {x^{10}}$$</p>
+                        <p>You may go off foiling with such high exponent, but there's the power rule to do this derivative.</p>
+                        <p>The Power Rule can be established through constantly applying the difference quotient on functions like quadratics and cubics. The result shows that for a function with a constant as its exponent , the derivative is :</p>
+                        <p class="equation">$$f'\left(x\right) = n{x^{n-1}}$$</p>
+                        <p>For our polynomial t(x), the derivative using the power rule is :</p>
+                        <p class="equation">$$t'\left(x\right) = 10{x^{9}}$$</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3><u>Chain Rule</u></h3>
+                        <p>The chain rule applies when multiple functions are contained within a single function such as cos(2x). The inside function is 2x and the outside function is cos().</p>
+                        <p>You have to take the derivative of the inside and multiply it to the derivative of the outside with the inside unchanged.</p>
+                        <p class="equation">$${\frac {d}{dx}}f\left(g\left(x\right)\right) = g'\left(x\right)f'\left(g\left(x\right)\right)$$</p>
+                        <p class="equation">$$let\ c\left(x\right) = cos({4x^{8}})$$</p>
+                        <p>For composite function c(x), the derivative using the chain rule (and power rule) is :</p>
+                        <p class="equation">$$c'\left(x\right) = -sin({4x^{8}})32x^{7}$$</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3><u>Product Rule</u></h3>
+                        <p>The product rule applies when two functions are multiplied by one another. So in the case of 2xcos(x), 2x is its own function and cos(x) is its own function.</p>
+                        <p class="equation">$$let\ p\left(x\right) = {x^{3}cos(x)} $$</p>
+                        <p>Product Rule states that the derivative for multiplying functions is :</p>
+                        <p class="equation">$${\frac {d}{dx}}f\left(x\right)g\left(x\right) = f'\left(x\right)g\left(x\right) + f\left(x\right)g'\left(x\right)$$</p>
+                        <p class="equation">$$p'\left(x\right) = 3x^{2}cos(x) + (x^{3})(-sin(x))$$</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3><u>Quotient Rule</u></h3>
+                        <p>The quotient rule is similar to the product rule but mainly used when two functions divide such as (2x)/Cos(x).</p>
+                        <p class="equation">$$let\ Q\left(x\right) = {\frac {sin(x)}{cos(x)} = tan(x)} $$</p>
+                        <p>Quotient Rule states that the derivative for dividing functions is :</p>
+                        <p class="equation">$${\frac {d}{dx}}{\frac {f\left(x\right)}{g\left(x\right)}} = {\frac {f'\left(x\right)g\left(x\right) - f\left(x\right)g'\left(x\right)}{(g\left(x\right))^{2}}}$$</p>
+                        <p class="equation">$$Q'\left(x\right) = {\frac {cos^{2}(x) + sin^{2}(x)}{cos^{2}(x)}} = sec^{2}(x)$$</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-------------Derivative Table [DU2]------------>
+        <hr id="du2" style="visibility:hidden;">
+        <div class="container-fluid">
+            <div class="primary-label">
+                <h1 class="jumbotron" style="background-color: #659BDB">Common Derivatives</h1>
+            </div>
+            <div class="container">
+                <table class="table table-bordered table-dark">
+                    <thead>
+                        <tr>
+                            <th>Function</th>
+                            <th>Derivative Format</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><p class="equation">$$sin(u)$$</p></td>
+                            <td><p class="equation">$$u'cos(u)$$</p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="equation">$$cos(u)$$</p></td>
+                            <td><p class="equation">$$-u'sin(u)$$</p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="equation">$$tan(u)$$</p></td>
+                            <td><p class="equation">$$u'sec^{2}(u)$$</p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="equation">$$sec(u)$$</p></td>
+                            <td><p class="equation">$$u'tan(u)sec(u)$$</p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="equation">$$cot(u)$$</p></td>
+                            <td><p class="equation">$$-u'csc^{2}(u)$$</p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="equation">$$csc(u)$$</p></td>
+                            <td><p class="equation">$$-u'cot(u)csc(u)$$</p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="equation">$$arcsin(u)$$</p></td>
+                            <td><p class="equation">$${\frac {u'}{\sqrt{1-u^2}}} $$</p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="equation">$$arccos(u)$$</p></td>
+                            <td><p class="equation">$$-{\frac {u'}{\sqrt{1-u^2}}} $$</p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="equation">$$arctan(u)$$</p></td>
+                            <td><p class="equation">$${\frac {u'}{1+u^2}} $$</p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="equation">$$e^{u}$$</p></td>
+                            <td><p class="equation">$$u'e^{u}$$</p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="equation">$$ln(u)$$</p></td>
+                            <td><p class="equation">$${\frac {u'}{u}} $$</p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="equation">$$log(u)$$</p></td>
+                            <td><p class="equation">$${\frac {u'}{uln(base)}} $$</p></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!---------Derivative Relations [DU3]------------->
+        <hr id="du3" style="visibility:hidden;">
+        <div class="container-fluid">
+            <div class="primary-label">
+                <h1 class="jumbotron" style="background-color: #659BDB">Interpreting Derivatives</h1>
+            </div>
+            <div class="container">
+                <div class="row row-eq-height">
+                    <div class="col-md-4">
+                        <h4>F(x) and F'(x)</h4>
+                        <p>The relationship between the function and slope is that if the F(x) is increasing, then F'(x) must be positive and vice versa is true.</p>
+                        <p>By knowing that F(x) is positive, you cannot make any assumptions about its slope F'(x).</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>F'(x) and F''(x)</h4>
+                        <p>F''(x) means the Second Derivative or the derivative of the first derivative.</p>
+                        <p>This might sound weird, but it is the slope of the slope.</p>
+                        <p>F'(x) and F''(x) shares the same relationship just like that between F(x) and F'(x)</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>F(x) and F''(x)</h4>
+                        <p>The original function and its second derivative are related by concavity.</p>
+                        <p>When F''(x) is positive, we have a concave up (convex) F(x).</p>
+                        <p>When F''(x) is negative, we have a concave down function</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Points of Inflection (POI)</h4>
+                        <p>When F''(x) equals zero or undefined and that F''(x) changes signs, this indicates a Point of Inflection</p>
+                        <p>Points of inflection help determine a change in concavity which helps us visualize the shape of a graph.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Critical Values</h4>
+                        <p>When F'(x) equals zero or undefined</p>
+                        <p>All critical values are potential relative minimums or maximums. If not either, then that would considered a tangency line</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!---------Theorems [DU4]------------->
+        <hr id="du4" style="visibility:hidden;">
+        <div class="container-fluid">
+            <div class="primary-label">
+                <h1 class="jumbotron" style="background-color: #659BDB">Derivative Theorems</h1>
+            </div>
+            <div class="container">
+                <div class="row row-eq-height">
+                    <div class="col-md-6">
+                        <h4>Intermediate Vaule Theorem</h4>
+                        <p>This theorem essentially states that a continous function will have a intermediate value between two Y values.</p>
+                        <p>In simpler terms, if F(1) = 5 and F(3) = 10, then between x = 1 and x = 3</p>
+                        <p>there must exist a x value for which f(x) = 7 because 7 is in between of 5 and 10, and we know to get to 10 from 5, you need to go pass 7.</p>
+                        <p class="equation">$$f\left(a\right) = 2 \\ f\left(b\right) = 5 \\ f\left(c\right) = 5 ≥ y ≥ 2$$</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Mean Value Theorem</h4>
+                        <p>This theorem requires a function to be differentiable. MVT guarantees that a function will 
+                        have a point between two points such that the point's derivative (slope) is equal to the average rate of change of the two points.</p>
+                        <p></p>
+                        <p class="equation">$${\frac {f\left(a\right) - f\left(b\right)}{a-b}} = f'\left(c\right)$$</p>
+                        <p>In simple terms, this defines that there exist a point between two points where its instantaneous slope is equal
+                        to the average rate of change for a differentiable function.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
+    <!-------------------INTEGRATION----------------------->
+    <div id="int" class="collapse">
+        
+        <!-------------Integral Basics [U1]------------->
+        <hr id="iu1" style="visibility:hidden;">
+        <div class="container-fluid">
+            <div class="primary-label">
+                <h1 class="jumbotron" style="background-color: #659BDB">Integration</h1>
+            </div>
+            <div class="container">
+                <div class="row row-eq-height">
+                    <div class="col-md-6">
+                        <h3><u>Intro to Integrals</u></h3>
+                        <p>The goal of using integrals is to find the area under a curve.</p>
+                        <p>Integration is the opposite of differentiation. With derivatives, you find the slope.
+                        Integrals take the area between curves and lines and are capable of producing the original function that was differentiated.</p>
+                        <p>There are several basic ways to solve integrals, so lets explore!</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3><u>Anti-Derivatives</u></h3>
+                        <p>Antiderivative (Indefinite Integrals) : Finding the original function given the derivative. These involve some memorization of the original function and its derivative such as seeing 2x 
+                        as the derivative should remind you that the original function or the antiderivative is the quadratic x squared.</p>
+                        <p class="equation">$${\frac {d}{dx}}{x^{2}} = 2x \ \ vs \int 2x\,dx = x^{2}$$</p>
+                        <p class="equation"></p>
+                        <p class="equation">$${\frac {d}{dx}}{sin(x)} = cos(x) \ \ vs \int cos(x)\,dx = sin(x)$$</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3><u>Plus C</u></h3>
+                        <p>When you take the indefinite integral of a function, you should add + C [for constant] to your answer</p>
+                        <p>When taking the derivative of a function, all constants are differentiated and they become 0 (power rule).</p>
+                        <p>Therefore, doing the opposite means that you will produce a constant value for which you don't know what it is (as of now).</p>
+                        <p class="equation">$$\int cos(x)\,dx = sin(x)$$</p>
+                        <p> The above is wrong. We should correct it to be :</p> 
+                        <p class="equation">$$\int cos(x)\,dx = sin(x) + C$$</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3><u>Definite Integrals</u></h3>
+                        <p>Remember that integrals find the area under a curve, well now we will do some math.</p>
+                        <p class="equation">$$find \ \int _{1}^{4}2x\,dx$$</p>
+                        <p>The 1 and 4 represents the limits (not that limit) or the bounds of the integral. Basically, we are
+                        saying that we want the area under the curve from x = 1 to x = 4 for this function 2x</p>
+                        <p>Since this is a linear function, you can easily calculate the area with trapezoids, but lets use calculus.</p>
+                        <p class="equation">$${\displaystyle \int _{1}^{4}\,2x \ dx=\left[x^{2}\right]_{1}^{4}=(4)^{2}-(1)^{2}\,.}$$</p>
+                        <p class="equation">$${\displaystyle \int _{1}^{4}\,2x \ dx= 16 - 1 = 15}$$</p>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <h3><u>Anti-Power Rule</u></h3>
+                        <p>Remember how power rule works with derivatives?</p>
+                        <p>Now we are doing the opposite.</p>
+                        <p>The opposite of subtracting is adding, and the opposite of multiplying is dividing.</p>
+                        <p class="equation">$$\int x^{n}\,dx = {\frac {x^{n+1}}{n+1}} + C$$</p>
+                        <p>This will undo a derivative that was derived with power rule. [simple?]</p>
+                        <p>Mastering this method will allow you to tackle an Integral's chain rule.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3><u>Chain Rule (U Substitution)</u></h3>
+                        <p>When we take a derivative for a composite function, we have the derivative of the inside function multiplied 
+                        by the outside's derivative with the inside unchanged.</p>
+                        <p>Doing the chain rule for integration is a bit tricky and the substitution rule comes into play.</p>
+                        <p class="equation">$$find \ \int (2x)^{2}\,dx$$</p>
+                        <p>Looking at the derivative that we are integrating, we should expect the format of "inside outside".
+                        Clearly, there is an inside function (2x) but its derivative is not here.</p>
+                        <button class="btn btn-primary" data-toggle="collapse" href="#answer4" role="button" aria-expanded="false" aria-controls="collapseExample">Solution</button>
+                        <div class="collapse" id="answer4">
+                            <p>Follow the format of U-substitution below</p>
+                            <p class="equation">$$let \ u = 2x \ so \ du = 2$$</p>
+                            <p class="equation">$${\frac {1}{2}du} = dx$$</p>
+                            <p class="equation">$$now \ \int (u)^{2}\,{\frac {1}{2}du}$$</p>
+                            <p class="equation">$$\int (u)^{2}\,{\frac {1}{2}du} = {\frac {1}{2}}{\frac {u^{3}}{3}} + C$$</p>
+                            <p class="equation">$$ = {\frac {1}{6}}*(2x)^{3} + C$$</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!---------------Fundamental Theorem of Calculus------------------>
+        <hr id="iu2" style="visibility:hidden;">
+        <div class="container-fluid">
+            <div class="primary-label">
+                <h1 class="jumbotron" style="background-color: #659BDB">Fundamental Theorem of Calculus</h1>
+            </div>
+            <div class="container">
+                <div class="row row-eq-height">
+                    <div class="col-md-6">
+                        <h3><u>Definition</u></h3>
+                        <p>The Fundamental Theorem of Calculus is a theorem that links the concept of differentiating a 
+                        function with the concept of integrating a function. The theorem is separated into two parts.</p>
+                        <p>If f is continuous on [a, b], then the function</p>
+                        <p class="equation">$$F(x)=\int _{a}^{x}\!f(t)\,dt.$$</p>
+                        <p>will have a derivative on the interval such that</p>
+                        <p class="equation">$$F'(x)= f(x)$$</p>
+                        <p>Secondly, if the function has a closed interval with defined real values, then :</p>
+                        <p class="equation">$$\int _{a}^{b}f(x)\,dx=F(b)-F(a)$$</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3><u>Mean Value Theorem</u></h3>
+                        <p>The MVT for integrals finds the average value of the function over an interval</p>
+                        <p class="equation">$$ {\frac {1}{b-a}} \int _{a}^{b}f(x)\,dx={\frac {F(b)-F(a)}{b-a}}.$$</p>
+                        <p>where F(x) is the integral of f(x). This essentially finds the average value of f(x) similar to
+                        how the slope formula finds the average rate of change.</p>
+                        <p>Let's try a simple and obvious example</p>
+                        <p class="equation">$$let \ f\left(x\right) = 5$$</p>
+                        <p>What is the average value of f(x), well it can only be 5.</p>
+                        <p>Now use calculus and prove that !</p>
+                        <p class="equation">$$\int _{a}^{b}5\,dx=\left[5x\right]_{a}^{b}$$</p>
+                        <p class="equation">$$ = {\frac {5(b) - 5(a)}{b-a}} = 5 $$</p>
+                        <p>We just proved that the average value of a straight line y = 5 is 5. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!------------------Area Between Two Curves------------->
+        <!--<hr id="iu3" style="visibility:hidden;">-->
+        <!--<div class="container-fluid">-->
+        <!--    <div class="primary-label">-->
+        <!--        <h1 class="jumbotron" style="background-color: #659BDB">Curve Areas</h1>-->
+        <!--    </div>-->
+        <!--    <div class="container">-->
+        <!--        <div class="row row-eq-height">-->
+        <!--            <div class="col-md-6">-->
+        <!--                <h3><u>Intro to Integrals</u></h3>-->
+                        
+        <!--            </div>-->
+        <!--            <div class="col-md-6">-->
+        <!--                <h3><u>Anti-Derivatives</u></h3>-->
+                        
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--    </div>-->
+        <!--</div>-->
+        
+        <!-----------------Volume and Revolution------------>
+        <!--<hr id="iu4" style="visibility:hidden;">-->
+        <!--<div class="container-fluid">-->
+        <!--    <div class="primary-label">-->
+        <!--        <h1 class="jumbotron" style="background-color: #659BDB">Revolution</h1>-->
+        <!--    </div>-->
+        <!--    <div class="container">-->
+        <!--        <div class="row row-eq-height">-->
+        <!--            <div class="col-md-6">-->
+        <!--                <h3><u>Intro to Integrals</u></h3>-->
+                        
+        <!--            </div>-->
+        <!--            <div class="col-md-6">-->
+        <!--                <h3><u>Anti-Derivatives</u></h3>-->
+                        
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--    </div>-->
+        <!--</div>-->
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light py-4">
+        <div class="container">
+            <div class="small text-center text-muted">Copyright &copy; 2019 - AP Calculus @Tele</div>
+        </div>
+    </footer>
 </body>
+
 </html>
