@@ -6,7 +6,6 @@ html {
     width: 100%;
     height: 100%;
     text-align: center;
-    scroll-behavior: smooth;
 }
 
 /*main image*/
@@ -15,12 +14,12 @@ html {
     text-align: center;
     width: 100%;
     height: 100%;
-    color: white;
 }
 
 .center {
-    vertical-align: middle;
     display: table-cell;
+    vertical-align: middle;
+    color: white;
 }
 
 /*navbar*/
@@ -30,7 +29,7 @@ html {
     position: relative;
 }
 
-.bg-light {
+[class*="bg-"] {
     box-shadow: 1px 1px 15px 1px grey;
 }
 
