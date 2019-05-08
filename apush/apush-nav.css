@@ -1,28 +1,28 @@
-/* Hover over navlink to generate 2 border bars top and bottom  */
-.borderX a:before, .borderX a:after
+/* Hover over navlink to generate 2 animate bars top and bottom  */
+.animate a:before, .animate a:after
 {
     position: absolute;
     opacity: 0;
     width: 0%;
-    height: 2px;
+    height: 3px;
     content: '';
-    background: blue;
+    background: black;
     transition: all 0.4s;
 }
 
-.borderX a:before
+.animate a:before
 {
     left: 0px;
     top: 0px;
 }
 
-.borderX a:after
+.animate a:after
 {
     right: 0px;
     bottom: 0px;
 }
 
-.borderX a:hover:before, .borderX a:hover:after
+.animate a:hover:before, .animate a:hover:after
 {
     opacity: 1;
     width: 100%;
