@@ -2,7 +2,6 @@
     background: url('../img/delaware.jpg') no-repeat center;
     background-size: cover;
 }
-
 body {
     background-color: #add8e6;
 }
@@ -20,6 +19,10 @@ h6 {
     background-color: #aabfff;
 }
 
+.text{
+    height:100%;
+}
+
 @media (max-width: 992px) {}
 
 #cc {
@@ -27,7 +30,8 @@ h6 {
 }
 
 #rm {
-    padding: 92.2px;
+    /*padding: 92.2px;*/
 
 }
+
 
