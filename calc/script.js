@@ -3,7 +3,7 @@ $(function() {
     var hash = "";
     const l = $("#limits");
     const d = $("#dy");
-    const i = $("#int");
+    const i = $("#integral");
 
     const code = '<a class="nav-link js-scroll-trigger" href=';
 
@@ -50,7 +50,7 @@ $(function() {
         $(".navbar-brand").append('<strong>Derivatives</strong>')
     });
 
-    $(".int").click(function() {
+    $(".integral").click(function() {
         d.collapse("hide");
         l.collapse("hide");
         i.addClass("show");
