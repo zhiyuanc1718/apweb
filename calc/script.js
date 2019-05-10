@@ -7,19 +7,19 @@ $(function() {
 
     const code = '<a class="nav-link js-scroll-trigger" href=';
 
-    var lim = [code + "#u1" + '>Basics</a',
+    var lim = [code + "#scroll" + '>Basics</a',
         code + "#u2" + '>One Sided</a>',
         code + "#u3" + '>Infinity</a>',
         code + "#u4" + '>Continuity</a>'
     ];
 
-    var dy = [code + "#du1" + '>Differentiation</a',
+    var dy = [code + "#scroll" + '>Differentiation</a',
         code + "#du2" + '>Derivative Table</a>',
         code + "#du3" + '>Intepretations</a>',
         code + "#du4" + '>Theorems</a>'
     ];
 
-    var integ = [code + "#iu1" + '>Integration</a',
+    var integ = [code + "#scroll" + '>Integration</a',
         code + "#iu2" + '>FTC</a>'
         // code + "#iu3" + '>Multi-Curves</a>',
         // code + "#iu4" + '>Revolution</a>'
@@ -66,7 +66,7 @@ $(function() {
         if (this.hash !== "") {
             var hash = this.hash;
             $('html, body').animate({
-                scrollTop: $(hash).offset().top
+                scrollTop: $(hash).offset().top + 1
             }, 800, function() {
                 window.location.hash = hash;
             });

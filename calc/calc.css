@@ -8,7 +8,7 @@
 
 .primary-label {
     padding: 15px 5px 10px 5px;
-    margin: 10px 5px 10px 5px;
+    margin: 30px 5px 10px 5px;
 }
 
 .list {
@@ -17,14 +17,13 @@
 }
 
 .text {
-    border-radius: 10px;
+    border-radius: 2px;
     border: 1px solid black;
     height: 100%;
 }
 
 .info {
     border: none;
-    border-radius: 20px;
 }
 
 p {
@@ -33,6 +32,7 @@ p {
 
 .label {
     margin-top: 20px;
+    padding-top: 20px;
 }
 
 img {
@@ -93,8 +93,14 @@ img {
         margin-bottom: 0em !important;
     }
     .primary-label{
-        padding: 0px;
+        padding: 10px!important;
         margin: 0px;
+        margin-bottom: 0px;
+        margin-top: 30px !important;
+    }
+    .text{
+        border: 0px !important;
+        background-color: lightblue;
     }
 }
 
