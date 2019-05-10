@@ -17,8 +17,6 @@
 }
 
 .text {
-    border-radius: 2px;
-    border: 1px solid black;
     height: 100%;
 }
 
@@ -45,17 +43,11 @@ img {
     .display {
         height: 33.33%;
     }
-    .center>h1 {
-        font-size: 7vw;
-    }
 }
 
 @media (min-width: 992px) {
     .display {
         height: 100%;
-    }
-    .center>h1 {
-        font-size: 70px;
     }
     .primary-label>h1 {
         font-size: 40px !important;
@@ -97,10 +89,6 @@ img {
         margin: 0px;
         margin-bottom: 0px;
         margin-top: 30px !important;
-    }
-    .text{
-        border: 0px !important;
-        background-color: lightblue;
     }
 }
 

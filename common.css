@@ -22,6 +22,18 @@ html {
     color: white;
 }
 
+@media (max-width: 992px) {
+    .center>h1 {
+        font-size: 7vw;
+    }
+}
+
+@media (min-width: 992px) {
+    .center>h1 {
+        font-size: 70px;
+    }
+}
+
 /*navbar*/
 .collapse a {
     font: 20px ;
