@@ -1,4 +1,4 @@
-/* Hover over navlink to generate 2 animate bars top and bottom  */
+ /*Hover over navlink to generate 2 animate bars top and bottom  */
 .animate a:before, .animate a:after
 {
     position: absolute;
