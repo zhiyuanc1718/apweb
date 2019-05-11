@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Calculus Website</title>
+    <title>Calculus Overview</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -18,6 +18,9 @@
     <!-- External Stylesheets -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="http://getbootstrap.com.vn/examples/equal-height-columns/equal-height-columns.css" />
+
+    <!--MathJax for equations-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 
     <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="calc.css">
@@ -103,9 +106,9 @@
                 <div class="col-md-6">
                     <div class="text">
                         <h3 class="label">Limits Notation</h3>
-                        <img class="img-fluid" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c3f174c16cc9e61932ecc7eb71b27a4f10a44fc9" alt="Limits-Image">
+                        <p>$$\lim _{x\to c}f(x)=L$$</p>
                         <h4>Limits at Infinity</h4>
-                        <img class="img-fluid" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9fd3ae906a64d6a49a74d2d4d10c19002da495a7">
+                        <p>$$\lim _{x\to 1}{\frac {x^{2}-1}{x-1}}=2$$</p>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -130,9 +133,9 @@
                 <div class="col-md-6">
                     <div class="text">
                         <h3 class="label">Disguised Derivatives</h3>
-                        <img class="img-fluid" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9315f1516ee5847107808697e43693d91abfc6e8">
+                        <p>$$f'(a)=\lim _{h\to 0}{\frac {f(a+h)-f(a)}{h}}$$</p>
                         <h4>Mathematical Definition</h4>
-                        <img class="img-fluid" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/52f8a3ef721b7705ef72e10d29176a215b088584">
+                        <p>$$m={\frac {\Delta f(a)}{\Delta a}}={\frac {f(a+h)-f(a)}{h}}$$</p>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -158,7 +161,7 @@
                 <div class="col-md-6">
                     <div class="text">
                         <h3 class="label">General Integral</h3>
-                        <img class="img-fluid" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a433aea7c0c8b43e6387aa906e7d855c1cb1f207">
+                        <p>$${\displaystyle \int _{a}^{b}\,f(x)dx=\left[F(x)\right]_{a}^{b}=F(b)-F(a)\,}$$</p>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -172,9 +175,9 @@
         </div>
     </div>
     <div style="background-color: #FAD3C9; padding:20px;"></div>
-    
+
     <!-- More Information -->
-    
+
     <div style="background-color: #000000; padding:20px;"></div>
 
     <div class="container-fluid" style="background-color:#000000;">

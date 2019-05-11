@@ -11,25 +11,8 @@
     margin: 30px 5px 10px 5px;
 }
 
-.text {
-    height: 100%;
-}
-
-.info {
-    border: none;
-}
-
 p {
     margin: 15px;
-}
-
-.label {
-    margin-top: 20px;
-    padding-top: 20px;
-}
-
-img {
-    margin-bottom: 20px;
 }
 
 /*Overlap CSS (mix in media)*/
@@ -57,17 +40,6 @@ img {
     p {
         margin: 10px !important;
     }
-    .col-md-6 {
-        margin-bottom: 5px;
-        padding: 10px;
-    }
-}
-
-@media (min-width:768px) {
-    .col-md-6 {
-        margin-bottom: 15px;
-        padding: 20px;
-    }
 }
 
 /*Extremely SMALL (such as phones)*/
@@ -76,14 +48,18 @@ img {
     .equation {
         font-size: 6px !important;
     }
-    .jumbotron{
+    .jumbotron {
         margin-bottom: 0em !important;
     }
-    .primary-label{
+    .primary-label {
         padding: 10px!important;
         margin: 0px;
         margin-bottom: 0px;
         margin-top: 30px !important;
+    }
+    .label {
+        margin-top: 0px !important;
+        padding-top: 0px !important;
     }
 }
 
