@@ -9,6 +9,7 @@ html {
 }
 
 /*main image*/
+
 #main {
     display: table;
     text-align: center;
@@ -22,7 +23,30 @@ html {
     color: white;
 }
 
+.label {
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.text {
+    height: 100%;
+}
+
+/* Apply to main [index.html] images 
+Adjust any rectangles into squares and apply round border */
+.circle {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+img {
+    margin: 10px 0px;
+}
+
 /* Add on to a Ul class containing li(s) */
+
 .list {
     text-align: left;
     display: inline-block;
@@ -40,9 +64,24 @@ html {
     }
 }
 
+@media (max-width: 768px) {
+    .col-md-6 {
+        margin-bottom: 5px;
+        padding: 10px;
+    }
+}
+
+@media (min-width:768px) {
+    .col-md-6 {
+        margin-bottom: 15px;
+        padding: 20px;
+    }
+}
+
 /*navbar*/
+
 .collapse a {
-    font: 20px ;
+    font: 20px;
     margin: 0px 10px;
     position: relative;
 }
@@ -50,6 +89,3 @@ html {
 [class*="bg-"] {
     box-shadow: 1px 1px 15px 1px grey;
 }
-
-
-

@@ -50,7 +50,7 @@ $(function() {
         }
     });
     
-    $(document).on('click', 'a:not(.btn)', function() {
+    $(document).on('click', 'a:not(.btn-dark)', function() {
         if (this.hash !== "") {
             var hash = this.hash;
             $('html, body').animate({
