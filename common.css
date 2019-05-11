@@ -22,6 +22,12 @@ html {
     color: white;
 }
 
+/* Add on to a Ul class containing li(s) */
+.list {
+    text-align: left;
+    display: inline-block;
+}
+
 @media (max-width: 992px) {
     .center>h1 {
         font-size: 7vw;

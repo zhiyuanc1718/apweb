@@ -1,5 +1,7 @@
 $(function() {
 
+    var resizeProcess = false; //dealing with screen Resizing
+    
     function show() {
         if ($(window).scrollTop()) {
             $(".navbar").addClass('bg-light')
@@ -9,6 +11,7 @@ $(function() {
         }
         else {
             $(".navbar").removeClass('bg-light')
+            $("#navbar").collapse('hide');
             $("div.collapse").removeClass('animate')
         }
     }
@@ -33,15 +36,21 @@ $(function() {
     
     //a transition from smaller screen size to larger ones 
     $(window).resize(function() {
-        if ($(window).width() < 992) {
+        if ($(window).width() < 992 - 15) {
             $("div.collapse").removeClass('animate')
+            resizeProcess = true;
         }
         else {
+            if (resizeProcess){
+                //using resizeProcess var to prevent collapsing
+                $("#navbar").collapse('hide');
+                resizeProcess = false;
+            }
             show();
         }
     });
     
-    $(document).on('click', 'a', function() {
+    $(document).on('click', 'a:not(.btn)', function() {
         if (this.hash !== "") {
             var hash = this.hash;
             $('html, body').animate({
