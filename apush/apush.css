@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: white;
+    background-color: #D1D2F9;
 }
 
 h6 {
@@ -13,10 +13,13 @@ h6 {
 }
 
 #co {
-    background-color: #F2CCC3;
+    background-color: #A3BCF9;
     /*#9bd5ff*/
 }
 
+.text {
+    height: 100%;
+}
 
 #c1 {
     background-color: #aabfff;
