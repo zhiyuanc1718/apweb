@@ -24,7 +24,7 @@ html {
     vertical-align: middle;
 }
 
-.course{
+.course {
     color: white;
 }
 
@@ -74,7 +74,16 @@ img {
     }
 }
 
-@media (max-width: 475px){
+@media (max-width: 568px) {
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 475px) {
     .label {
         margin-top: 0px !important;
         padding-top: 0px !important;

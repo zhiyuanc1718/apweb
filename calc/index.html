@@ -32,6 +32,18 @@
 
 </head>
 
+<style>
+    .left {
+        border-right: 1px solid white;
+    }
+    
+    @media (max-width: 768px){
+        .left{
+            border-right: 0px;
+        }
+    }
+</style>
+
 <body data-spy="scroll" data-target=".navbar">
 
     <!-- Navigation -->
@@ -65,7 +77,7 @@
     <div id="exam" style="background-color: #CAE5FF; padding:20px;"></div>
     <div class="container-fluid" style="background-color: #CAE5FF"><br>
         <div class="primary-label">
-            <h2>Course Description</h2>
+            <h1>Course Description</h1>
         </div>
         <div class="container">
             <div class="row row-eq-height">
@@ -98,7 +110,7 @@
     <div id="lim" style="background-color: #FAD3C9; padding:20px;"></div>
     <div class="container-fluid" style="background-color: #FAD3C9;">&nbsp
         <div class="primary-label">
-            <h2>Limits</h2>
+            <h1>Limits</h1>
         </div>
         <div class="container">
             <div class="row row-eq-height">
@@ -124,7 +136,7 @@
     <div id="dy" style="background-color: #CAE5FF; padding:20px;"></div>
     <div class="container-fluid" style="background-color: #CAE5FF">&nbsp
         <div class="primary-label">
-            <h2>Derivatives</h2>
+            <h1>Derivatives</h1>
         </div>
         <div class="container">
             <div class="row row-eq-height">
@@ -151,7 +163,7 @@
     <div id="int" style="background-color: #FAD3C9; padding:20px;"></div>
     <div class="container-fluid" style="background-color: #FAD3C9">&nbsp
         <div class="primary-label">
-            <h2>Integrals</h2>
+            <h1>Integrals</h1>
         </div>
         <div class="container">
             <div class="row row-eq-height">
@@ -176,11 +188,11 @@
 
     <div style="background-color: #000000; padding:20px;"></div>
 
-    <div class="container-fluid" style="background-color:#000000;">
-        <h1 style="color:white">For More Information <i class="fas fa-info-circle"></i></h1>
+    <div class="container-fluid" style="background-color:#000000; color:white">
+        <h1>For More Information <i class="fas fa-info-circle"></i></h1>
         <div class="row row-eq-height">
-            <div class="col-md-6">
-                <div class="text jumbotron">
+            <div class="col-md-6 left">
+                <div class="text">
                     <h2>Contact Us <i class="fas fa-at"></i></h2>
                     <br>
                     <h6>Email <strong>jacksonw4481@hstat.org</strong> for more about APs in general</h6>
@@ -191,9 +203,10 @@
                 </div>
             </div>
             <div class="col-md-6 ">
-                <div class="text jumbotron">
+                <div class="text">
                     <h2>Read More <i class="fab fa-readme"></i></h2>
-                    <h3>Get Excited to Learn More</h3>
+                    <br>
+                    <h4>Get Excited to Learn More</h4>
                     <br>
                     <quote>All About Calculus AB</quote>
                     <a href="calc.html">Click Here</a>
