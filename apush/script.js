@@ -7,62 +7,63 @@ $(function() {
         if ($(window).scrollTop()) {
             //links become dark when scroll
             $(".nav-link").removeClass("ush-link");
-            $(".navbar-brand").css("color","black");
+            $(".navbar-brand").css("color", "black");
             $(".navbar-toggler").removeClass("ush-icon")
         }
         else {
             //links become white when not scroll
             $(".navbar-toggler").addClass("ush-icon")
-            if ($(".navbar-collapse").hasClass("show") == false){
-                $(".navbar-brand").css("color","white");
+            if ($(".navbar-collapse").hasClass("show") == false) {
+                $(".navbar-brand").css("color", "white");
                 $(".nav-link").addClass("ush-link")
             }
         }
     }
-    
-    $(".navbar-toggler").click(function(){
-        if ($("div.navbar-collapse").hasClass("collapse")){
-            $(".navbar-brand").css("color","black")
+
+    $(".navbar-toggler").click(function() {
+        $(".navbar-brand").css("color", "black")
+        if ($("div.navbar-collapse").hasClass("collapse")) {
             $(".nav-link").removeClass("ush-link")
-        }else{
+        }
+        else {
             $(".nav-link").addClass("ush-link")
-            $(".navbar-brand").css("color","black !important")
         }
     });
-    
-    $(window).resize(function() {
-       show();
-    });
-    
-    //calling the function upon screen finishes loading and when scrolling
+
+
+    //calling the function upon screen updates / finishes loading and when scrolling 
     show();
     $(document).scroll(function() {
         show();
     });
-    
-    
-    //NOTE [do not confuse] .pd-* class goes to buttons, #pd-* IDs goes to content
-    $(".btn-dark").click(function(){
 
-        //close and swap period content
-        if ($(this).hasClass("s1")){
-            $(".pd1,.pd2,.pd3").removeClass("disabled")
-            $("#pd1, #pd2, #pd3").collapse("hide")
+    $(window).resize(function() {
+        show();
+    });
+
+    //AP Period Selector : content Fade in & out
+    $(document).on("click", ".controller", function() {
+        // Get the current APUSH Period and fade it out
+        var strArray = $("#periods").html().split("Period ")
+        var periodNum = strArray[1].substring(0, 1)
+        var newNum = periodNum;
+        // This IF Statement checks if the controller is PLUS or MINUS
+        if ($(this).hasClass('fa-plus-circle')) {
+            newNum++;
+            if (newNum > 9) {
+                newNum = 1;
+            }
         }
-        else if ($(this).hasClass("s2")){
-            $(".pd4,.pd5,.pd6").removeClass("disabled")
-            $("#pd4, #pd5, #pd6").collapse("hide")
-        }else{
-            $(".pd7,.pd8,.pd9").removeClass("disabled")
-            $("#pd7, #pd8, #pd9").collapse("hide")
-            
-            //close expanded text in periods 7 and 8
-            $("#more7, #more8").collapse("hide")
+        else {
+            newNum--;
+            if (newNum < 1) {
+                newNum = 9;
+            }
         }
-        
-        $(this).addClass("disabled")
-        //however... show one of the three within that set (s1,s2,s3)
-        var str1 = "#" + ($(this).attr("class")).substring(0,4) //take the first 3 letters of class list
-        $(str1).toggleClass("collapse");
+        $("#pd" + (periodNum)).fadeOut("slow", function() {
+            $("#pd" + newNum).fadeIn(1000)
+            $("#periods").html('<i class="fas fa-minus-circle controller"></i> Period ' + newNum +
+            ' <i class="fas fa-plus-circle controller"></i>');
+        });
     });
 });

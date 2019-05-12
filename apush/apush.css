@@ -5,7 +5,11 @@
 }
 
 body {
-    background-color: #D1D2F9;
+    background-color: #FFF9E9;
+}
+
+h4 {
+    font-size: 28px;
 }
 
 h6 {
@@ -19,6 +23,10 @@ h6 {
 
 .text {
     height: 100%;
+}
+
+.summary1 {
+    font-size: 18px;
 }
 
 #c1 {
