@@ -1,5 +1,7 @@
 $(function() {
 
+    //common.js file is linked to apush[index] and calc[index]
+    
     var resizeProcess = false; //dealing with screen Resizing
     
     function show() {

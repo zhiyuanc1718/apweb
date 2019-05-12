@@ -1,6 +1,8 @@
 /*Note that all of the following css applies to all webpages
 Consider putting down css here ONLY for consistent format*/
 
+/*common.css applies to all files unlike common.js*/
+
 body,
 html {
     width: 100%;
@@ -33,15 +35,6 @@ html {
 
 .text {
     height: 100%;
-}
-
-/* Apply to main [index.html] images 
-Adjust any rectangles into squares and apply round border */
-.circle {
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 50%;
 }
 
 img {
