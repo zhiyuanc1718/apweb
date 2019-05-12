@@ -3,7 +3,7 @@ $(function() {
     var num = 0;
     var quotes = ['"Stay Happy and Love AP"', '"The eyes of the world are upon you"',
         '"Life is like riding a bicycle. To keep your balance you must keep moving."',
-        '"Success is not final ; failure is not fatal : it is the courage to continue that counts."',
+        '"Success is not final , failure is not fatal : it is the courage to continue that counts."',
         '"Go confidently in the direction of your dreams. Live the life you have imagined."',
         '"The important thing is not to stop questioning. Curiosity has its own reason for existing."'
     ];
