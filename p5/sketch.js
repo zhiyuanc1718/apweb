@@ -27,7 +27,7 @@ function setup() {
 }
 
 function Background() {
-    background(255, 255, 255);
+    background(0);
     particleB();
 }
 
