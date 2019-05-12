@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="common.css">
 
     <!--Custom Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Courgette|Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Source+Sans+Pro" rel="stylesheet">
 
 </head>
 
@@ -43,13 +43,21 @@
         margin-left: 5%;
     }
 
+    .left {
+        border-right: 0px;
+    }
+
     .quote,
     .name {
         font-family: 'Indie Flower', cursive;
     }
 
     h2 {
-        font-family: 'Courgette', cursive;
+        font-family: 'Source Sans Pro', cursive;
+    }
+
+    .arrow:hover {
+        color: #F39342;
     }
 
     @media (max-width: 568px) {
@@ -58,6 +66,12 @@
         }
         h2 {
             font-size: 25px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .left{
+            border-right: 1px solid black;
         }
     }
 </style>
@@ -70,12 +84,13 @@
             <h1 class="quote">"Stay Happy and Love AP"</h1>
             <br>
             <h1 class="name">Zhiyuan Chen</h1>
+            <br><br><br><br><br>
+            <h1><i class="fas fa-arrow-circle-down arrow"></i></h1>
         </div>
     </header>
 
-
     <!--Describe AP-->
-    <div class="container-fluid" style="background-color: #F0A882; padding:20px 0px"><br>
+    <div id="AP" class="container-fluid" style="background-color: #F0A882; padding:20px 0px"><br>
         <h1>What Is AP ?</h1>
         <div class="container">
             <div class="row row-eq-height">
@@ -105,7 +120,7 @@
         <h1>AP Courses</h1>
         <div class="container">
             <div class="row row-eq-height">
-                <div class="col-md-6">
+                <div class="col-md-6 left">
                     <div class="text">
                         <h2 class="label">AP® Calculus AB</h2>
                         <img class="circle" src="img/trig.jpg">
@@ -135,11 +150,12 @@
         <h1>AP Students</h1>
         <div class="container">
             <div class="row row-eq-height">
-                <div class="col-md-6">
+                <div class="col-md-6 left">
                     <div class="text">
                         <h2 class="label"></h2>
                         <h5>"I don't believe in Limits. I believe in Infinite Potentials"</h5>
                         <p><strong>-- Zhiyuan Chen</strong></p>
+                        <img class="circle" src="img/zhiyuan.png">
                         <p>AP Calculus Exam on May 14th 2019</p>
                         <p>Also enrolled in / taking : </p>
                         <ul class="list">
@@ -153,6 +169,7 @@
                         <h2 class="label"></h2>
                         <h5>"If you're going through hell in this class, keep going"</h5>
                         <p><strong>-- Jackson Wu</strong></p>
+                        <img class="circle" src="img/jackson.png">
                         <p>Taken AP US History Exam on May 10th 2019</p>
                         <p>Also enrolled in / taking : </p>
                         <ul class="list">
