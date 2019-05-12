@@ -24,8 +24,35 @@
 
     <!--The common file removes repeated css/js -->
     <link rel="stylesheet" href="common.css">
+    
+    <!--Custom Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Indie+Flower" rel="stylesheet">
 
 </head>
+
+<style>
+    .center>h1 {
+        width: 90%;
+        margin-left: 5%;
+    }
+    
+    .quote, .name{
+        font-family: 'Indie Flower', cursive;
+    }
+    
+    h2{
+        font-family: 'Courgette', cursive;
+    }
+
+    @media (max-width: 568px) {
+        h1 {
+            font-size: 30px;
+        }
+        h2 {
+            font-size: 25px;
+        }
+    }
+</style>
 
 <body data-spy="scroll" data-target=".navbar">
 
@@ -40,11 +67,8 @@
 
 
     <!--Describe AP-->
-    <div class="container-fluid" style="background-color: #F0A882; padding:20px"></div>
-    <div class="container-fluid" style="background-color: #F0A882"><br>
-        <div class="primary-label">
-            <h2>What Is AP ?</h2>
-        </div>
+    <div class="container-fluid" style="background-color: #F0A882; padding:20px 0px"><br>
+        <h1>What Is AP ?</h1>
         <div class="container">
             <div class="row row-eq-height">
                 <div class="col-md-6">
@@ -69,18 +93,15 @@
 
 
     <!--AP Selector Section-->
-    <div class="container-fluid" style="background-color: #ED8F74; padding:20px"></div>
-    <div class="container-fluid" style="background-color: #ED8F74"><br>
-        <div class="primary-label">
-            <h2>AP Courses</h2>
-        </div>
+    <div class="container-fluid" style="background-color: #ED8F74; padding:20px 0px"><br>
+        <h1>AP Courses</h1>
         <div class="container">
             <div class="row row-eq-height">
                 <div class="col-md-6">
                     <div class="text">
                         <h2 class="label">AP® Calculus AB</h2>
                         <img class="circle" src="img/trig.jpg">
-                        <h4>Position-Velocity-Acceleration</h4>
+                        <h4>Position Velocity Acceleration</h4>
                         <h5>Guiding Question</h5>
                         <p>How can we calculate motion with respect to time?</p>
                         <a href="calc/index.html" class="btn btn-primary" role="button">Learn Calculus</a>
@@ -99,15 +120,11 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid" style="background-color: #ED8F74; padding:20px"></div>
 
 
     <!--Creator Info/Quotes-->
-    <div class="container-fluid" style="background-color: #EB7466; padding:20px"></div>
-    <div class="container-fluid" style="background-color: #EB7466"><br>
-        <div class="primary-label">
-            <h2>AP Students</h2>
-        </div>
+    <div class="container-fluid" style="background-color: #EB7466; padding:20px 0px"><br>
+        <h1>AP Students</h1>
         <div class="container">
             <div class="row row-eq-height">
                 <div class="col-md-6">
@@ -138,12 +155,10 @@
             </div>
         </div>
     </div>
-    <div div class="container-fluid" style="background-color: #EB7466; padding:20px;"></div>
 
 
     <!-- More Information -->
-    <div style="background-color: #000000; padding:20px;"></div>
-    <div class="container-fluid" style="background-color:#000000; color:white">
+    <div class="container-fluid" style="background-color:#000000; color:white; padding:20px 0px 10px 0px;">
         <h1>For More Information <i class="fas fa-info-circle"></i></h1>
         <br>
         <div>
@@ -156,7 +171,6 @@
             <quote>We will love to hear from you.</quote>
         </div>
     </div>
-    <div style="background-color: #000000; padding:10px;"></div>
 
 
     <!-- Footer -->
