@@ -19,7 +19,6 @@ function setup() {
     canvas.position(0, 0);
     canvas.style("z-index", "-1");
     canvas.style('display', 'block');
-    rectMode(CENTER)
     x = w;
     y = 4 * h / 5;
     for (var i = 0; i < 20; i++) {
@@ -29,8 +28,6 @@ function setup() {
 
 function Background() {
     background(255, 255, 255);
-    fill(0, 0, 0, 230)
-    rect(w / 2, h / 2, w, h)
     particleB();
 }
 
@@ -65,7 +62,6 @@ function particleB() {
             particles.push(new particle(-h / 2, 0, 0, w));
         }
     }
-
     for (var t = 0; t < particles.length; t++) {
         particles[t].display()
         particles[t].move()
@@ -119,7 +115,6 @@ function Shape() {
             polygon(0, 0, this.rad, this.sides)
         }
         pop();
-
     };
     this.move = function() {
         this.x += this.d_x
@@ -131,11 +126,9 @@ function ShapeBehavior() {
     if (frameCount % rate == 0) {
         shapes.push(new Shape());
     }
-
     for (var i = 0; i < shapes.length; i++) {
         shapes[i].display();
         shapes[i].move();
-
         if (shapes[i].x < 30 || shapes[i].x > w - 30) {
             shapes[i].d_x *= -1
         }

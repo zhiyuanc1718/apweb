@@ -19,26 +19,63 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="http://getbootstrap.com.vn/examples/equal-height-columns/equal-height-columns.css" />
 
+    <!--P5.JS for animations-->
+    <!--<script src="p5/p5.min.js"></script>-->
+    <!--<script src="p5/addons/p5.dom.min.js"></script>-->
+    <!--<script src="p5/addons/p5.sound.min.js"></script>-->
+    
+    <script src="main.js"></script>
+    
     <!--The common file removes repeated css/js -->
     <link rel="stylesheet" href="common.css">
-    <script src="common.js"></script>
 
 </head>
 
 <body data-spy="scroll" data-target=".navbar">
 
     <!-- centered main page background image -->
-    <header id="main">
+    <header id="main" style="background-color: #F1E5C0">
         <div class="center">
-            <h1>AP® Guide</h1>
+            <h1 class="quote">"Stay Happy and Love AP"</h1>
+            <br>
+            <h1 class="name">Zhiyuan Chen</h1>
         </div>
     </header>
-
-    <div class="container-fluid" style="background-color: #98C1D9; padding:20px"></div>
-    <!-- course description -->
-    <div class="container-fluid" style="background-color: #98C1D9"><br>
+    
+    <!--Describe AP-->
+    <div class="container-fluid" style="background-color: #F0A882; padding:20px"></div>
+    <div class="container-fluid" style="background-color: #F0A882"><br>
         <div class="primary-label">
-            <h2>Advanced Placement</h2>
+            <h2>What Is AP ?</h2>
+        </div>
+        <div class="container">
+            <div class="row row-eq-height">
+                <div class="col-md-6">
+                    <div class="text">
+                        <h2 class="label">Advanced Placement</h2>
+                        <p>AP Courses are tougher than regular courses.</p>
+                        <p>Before consider taking an AP course, remind yourself the effort you will need to show towards the class.</p>
+                        <p>AP is taught at College Level (introductory) and is <strong>recommended</strong> that you meet ALL of the prerequisites</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text">
+                        <h2 class="label">College Credit</h2>
+                        <p>Since AP is college level, many colleges offer credits for these courses.</p>
+                        <p>In order to earn these credits, taking the course is important, but passing
+                        the exam itself is the only way to earn college credit.</p>
+                        <p>For any AP exam, a passing score is 3, but we recommend to aim for scores of 4 or 5.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--AP Selector Section-->
+    <div class="container-fluid" style="background-color: #ED8F74; padding:20px"></div>
+    <div class="container-fluid" style="background-color: #ED8F74"><br>
+        <div class="primary-label">
+            <h2>AP Courses</h2>
         </div>
         <div class="container">
             <div class="row row-eq-height">
@@ -65,10 +102,10 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid" style="background-color: #98C1D9; padding:20px"></div>
+    <div class="container-fluid" style="background-color: #ED8F74; padding:20px"></div>
 
-    <div class="container-fluid" style="background-color: #FFD972; padding:20px"></div>
-    <div class="container-fluid" style="background-color: #FFD972"><br>
+    <div class="container-fluid" style="background-color: #EB7466; padding:20px"></div>
+    <div class="container-fluid" style="background-color: #EB7466"><br>
         <div class="primary-label">
             <h2>AP Students</h2>
         </div>
@@ -108,7 +145,7 @@
         </div>
     </div>
 
-    <div div class="container-fluid" style="background-color: #FFD972; padding:20px;"></div>
+    <div div class="container-fluid" style="background-color: #EB7466; padding:20px;"></div>
 
 
 
