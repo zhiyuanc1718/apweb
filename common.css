@@ -91,6 +91,9 @@ img {
     h2 {
         font-size: 25px;
     }
+    .controller {
+        font-size: 35px;
+    }
 }
 
 @media (max-width: 475px) {
