@@ -62,15 +62,13 @@ $(function() {
         $(".navbar-brand").append('<strong>Integrals</strong>')
     });
 
+    //idea repeated from common.js 
     $(document).on('click', 'a', function() {
-        if (this.hash !== "") {
-            var hash = this.hash;
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top + 1
-            }, 800, function() {
-                window.location.hash = hash;
-            });
-        }
+        event.preventDefault();
+        var hash = this.hash;
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top + 1
+        }, 800);
     });
 
     // Navbar Display Related or Window Size
@@ -127,7 +125,7 @@ $(function() {
         //Graph 4
         '<iframe src="https://www.desmos.com/calculator/iqtulixwqj?embed" width="90%" height="400px" style="border: 1px solid #ccc" frameborder=0></iframe>' +
         '<p>Looking from the right side, the expected y value (limit) is 4 at x = 4. However, looking from the left hand side, the limit is -4.</p>',
-        
+
         //Graph 5
         '<iframe src="https://www.desmos.com/calculator/nxnxg8tx6v?embed" width="90%" height="400px" style="border: 1px solid #ccc" frameborder=0></iframe>' +
         "<p>What is special about this absolute value graph? Well, it's continous if you are wondering!</p>",
@@ -142,10 +140,10 @@ $(function() {
     ];
 
     //graph modal button is clicked, check button secondary class.
-    $(".gm").click(function(){
+    $(".gm").click(function() {
         console.log($(this).attr("class"))
         var randList = $(this).attr("class").split("g");
-        $(".modal-body").html("").append(embed[randList[1]-1]);
+        $(".modal-body").html("").append(embed[randList[1] - 1]);
     });
-    
+
 });
