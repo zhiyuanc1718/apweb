@@ -53,6 +53,11 @@
         font-family: 'Indie Flower', cursive;
     }
 
+    .describe {
+        position: relative;
+        top: 80%;
+    }
+
     h2 {
         font-family: 'Source Sans Pro', cursive;
     }
@@ -66,6 +71,12 @@
             border-right: 1px solid black;
         }
     }
+
+    @media (max-width: 568px) {
+        .arrow {
+            font-size: 40px;
+        }
+    }
 </style>
 
 <body data-spy="scroll" data-target=".navbar">
@@ -76,8 +87,9 @@
             <h1 class="quote"></h1>
             <br>
             <h1 class="name"></h1>
+            <br>
             <h2 class="describe"></h2>
-            <br><br><br><br><br>
+            <br><br>
             <h1><i class="fas fa-arrow-circle-down arrow"></i></h1>
         </div>
     </header>
