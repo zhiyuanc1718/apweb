@@ -27,6 +27,7 @@ h6 {
 
 .controller:hover{
     color: #F39342;
+    cursor: pointer;
 }
 
 /* used in apush-script.js */
