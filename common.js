@@ -1,9 +1,9 @@
 $(function() {
 
     //common.js file is linked to apush[index] and calc[index]
-    
+
     var resizeProcess = false; //dealing with screen Resizing
-    
+
     function show() {
         if ($(window).scrollTop()) {
             $(".navbar").addClass('bg-light')
@@ -17,7 +17,7 @@ $(function() {
             $("div.collapse").removeClass('animate')
         }
     }
-    
+
     // If the scrollbar is moved, fade in navbar background
     show();
     $(document).scroll(function() {
@@ -30,12 +30,12 @@ $(function() {
             $(".navbar").addClass('bg-light')
         }
     });
-    
+
     //collapse the expanded navbar upon clicking a link (for screen size smaller than large 992px)
     $("a.nav-link").click(function() {
         $("#navbar").collapse('hide');
     });
-    
+
     //a transition from smaller screen size to larger ones 
     $(window).resize(function() {
         if ($(window).width() < 992 - 15) {
@@ -43,7 +43,7 @@ $(function() {
             resizeProcess = true;
         }
         else {
-            if (resizeProcess){
+            if (resizeProcess) {
                 //using resizeProcess var to prevent collapsing
                 $("#navbar").collapse('hide');
                 resizeProcess = false;
@@ -51,15 +51,12 @@ $(function() {
             show();
         }
     });
-    
-    $(document).on('click', 'a:not(.btn-dark)', function() {
-        if (this.hash !== "") {
-            var hash = this.hash;
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 800, function() {
-                window.location.hash = hash;
-            });
-        }
+
+    $(document).on('click', 'a', function() {
+        event.preventDefault();
+        var hash = this.hash
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 800);
     });
 });
