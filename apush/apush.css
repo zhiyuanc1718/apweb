@@ -25,6 +25,10 @@ h6 {
     background-color: #aabfff;
 }
 
+.controller:hover{
+    color: #F39342;
+}
+
 /* used in apush-script.js */
 
 .ush-link {

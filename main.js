@@ -32,7 +32,7 @@ $(function() {
     function changeContent() {
         $('.quote').html(quotes[num]).css("color", "#F1543A");
         $('.name').html(names[num]).css("color", "#F39342");
-        if (num < 4){
+        if (num < descript.length){
             $('.describe').html(descript[num]).css("color","#EB7466");
         }else{
             $('.describe').html("");
