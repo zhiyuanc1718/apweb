@@ -52,7 +52,7 @@ $(function() {
         }
     });
 
-    $(document).on('click', 'a', function() {
+    $(document).on('click', 'a.nav-link', function() {
         event.preventDefault();
         var hash = this.hash
         $('html, body').animate({
