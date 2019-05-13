@@ -52,7 +52,7 @@ $(function() {
         }
     });
 
-    $(document).on('click', 'a.js-scroll-trigger', function() {
+    $(document).on('click touchstart', 'a.js-scroll-trigger', function() {
         event.preventDefault();
         var hash = this.hash
         $('html, body').animate({

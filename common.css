@@ -2,6 +2,7 @@
 Consider putting down css here ONLY for consistent format*/
 
 /*common.css applies to all files unlike common.js*/
+
 /*NOTE : some content might be repeated from calc.css, but calc.css is separate mainly for calc design*/
 
 body,
@@ -16,11 +17,13 @@ html {
 #main {
     display: table;
     text-align: center;
-    width: 100%;
-    height: 100%;
+    width: inherit;
+    height: inherit;
+    position: relative;
 }
 
-.center {
+.center,
+.holder {
     display: table-cell;
     vertical-align: middle;
 }
@@ -56,12 +59,18 @@ img {
 
 @media (max-width: 992px) {
     .center>h1 {
-        font-size: 7vw;
+        font-size: 6.5vw;
+    }
+    .holder>h1 {
+        font-size: 6vw;
     }
 }
 
 @media (min-width: 992px) {
     .center>h1 {
+        font-size: 8vw;
+    }
+    .holder>h1 {
         font-size: 70px;
     }
 }
@@ -86,7 +95,7 @@ img {
 
 @media (max-width: 568px) {
     h1 {
-        font-size: 30px;
+        font-size: 30px !important;
     }
     h2 {
         font-size: 25px;
