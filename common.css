@@ -2,6 +2,7 @@
 Consider putting down css here ONLY for consistent format*/
 
 /*common.css applies to all files unlike common.js*/
+/*NOTE : some content might be repeated from calc.css, but calc.css is separate mainly for calc design*/
 
 body,
 html {
@@ -41,6 +42,11 @@ img {
     margin: 10px 0px;
 }
 
+.primary-label {
+    padding: 15px 5px 10px 5px;
+    margin: 30px 5px 10px 5px;
+}
+
 /* Add on to a Ul class containing li(s) */
 
 .list {
@@ -65,6 +71,10 @@ img {
         margin-bottom: 5px;
         padding: 10px;
     }
+    .primary-label {
+        padding: 20px 5px 10px 5px !important;
+        margin: 20px 5px 10px 5px !important;
+    }
 }
 
 @media (min-width:768px) {
@@ -87,6 +97,12 @@ img {
     .label {
         margin-top: 0px !important;
         padding-top: 0px !important;
+    }
+    .primary-label {
+        padding: 10px!important;
+        margin: 0px;
+        margin-bottom: 0px;
+        margin-top: 30px !important;
     }
 }
 
