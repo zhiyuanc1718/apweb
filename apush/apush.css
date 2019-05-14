@@ -8,8 +8,17 @@ body {
     background-color: #FFF9E9;
 }
 
+li,
+p {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+h5,
 h6 {
     padding: 20px;
+    font-family: 'Muli', sans-serif;
+    font-family: 'Heebo', sans-serif;
 }
 
 #co {
@@ -25,7 +34,7 @@ h6 {
     background-color: #aabfff;
 }
 
-.controller:hover{
+.controller:hover {
     color: #F39342;
     cursor: pointer;
 }
