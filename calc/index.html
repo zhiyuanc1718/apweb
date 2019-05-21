@@ -31,7 +31,7 @@
     <script src="../common.js"></script>
 
     <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Righteous|Yeon+Sung" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Righteous|Yeon+Sung" rel="stylesheet">
     
 </head>
 
@@ -70,6 +70,7 @@
             <div class="container collapse navbar-collapse" id="navbar">
                 <div class="navbar-nav ml-auto my-2 my-lg-0">
                     <a class="nav-link js-scroll-trigger" href="#exam">Course</a>
+                    <a class="nav-link js-scroll-trigger" href="#format">AP Exam</a>
                     <a class="nav-link js-scroll-trigger" href="#lim">Limits</a>
                     <a class="nav-link js-scroll-trigger" href="#dy">Derivatives</a>
                     <a class="nav-link js-scroll-trigger" href="#int">Integral</a>
@@ -86,8 +87,8 @@
     </header>
 
     <!-- course description -->
-    <div id="exam" style="background-color: #CAE5FF; padding:20px;"></div>
-    <div class="container-fluid" style="background-color: #CAE5FF"><br>
+    <div id="exam" style="background-color: #FFDECB; padding:20px;"></div>
+    <div class="container-fluid" style="background-color: #FFDECB"><br>
         <div class="primary-label">
             <h1>Course Description</h1>
         </div>
@@ -117,6 +118,62 @@
             </div>
         </div>
     </div>
+    
+    <!--AP EXAM Format-->
+    <div id="format"></div>
+    <div class="container-fluid" style="background-color: #CAE5FF; padding: 50px 0px 20px 0px;">
+        <div class="primary-label">
+            <h1>AP Exam Format <i class="fas fa-scroll"></i></h1>
+        </div>
+        <p>The AP Calculus AB Exam is 3 hours and 15 minutes long and has a 2 multiple choice sections and 2 free response sections.</p>
+        <div class="container">
+            <div class="row row-eq-height">
+                <!--Section I-->
+                <div class="col-md-6">
+                    <div class="text">
+                        <p><strong>Section I — Part A:</strong> Multiple Choice | 30 Questions | 60 minutes | No Calculator | 33.3% of Exam Score</p>
+                        <ul class="list">
+                            <li>Question topics range from limits to integrals.</li>
+                            <li>You have to do all math without a calculator.</li>
+                            <li>You have <strong>two minutes per question</strong> so
+                             it is <strong>NOT</strong> recommended that you spend more than 2 minutes on a question</li>
+                            <li>It is reasonable to say that difficulty increases as you proceed towards the end. 
+                            However, this is not confirmed to be true, so skip around questions as you wish.</li>
+                        </ul>
+                        <p><strong>Section I — Part B:</strong> Multiple Choice | 15 Questions | 45 minutes | Calculator | 16.7% of Exam Score</p>
+                        <ul class="list">
+                            <li>Question topics range from finding derivatives to integrals</li>
+                            <li>You may not require the calculator for some questions.</li>
+                            <li>Because you have <strong>three minutes per question</strong>, you will
+                            feel less stressed out on this section if you proceed at regular pace.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--Section II-->
+                <div class="col-md-6">
+                    <div class="text">
+                        <p><strong>Section II — Part A:</strong> Free Response | 2 Question | 30 minutes | Calculator Required | 16.7% of Exam Score</p>
+                        <ul class="list">
+                            <li>This section you have <strong>15 minutes per question</strong></li>
+                            <li>Because the Section II booklet will not be sealed up, you can go back to this section later</li>
+                            <li>However, you will not be able to use the calculator once 30 minutes is up.</li>
+                            <li>All Answers must be rounded to three decimal places at the end of calculation.</li>
+                        </ul>
+                        <p><strong>Section II — Part B:</strong> Free Response | 4 Question | 60 minutes | No Calculator | 33.3% of Exam Score</p>
+                        <ul class="list">
+                            <li>You will have to perform integrals by hand (including complex ones)</li>
+                            <li>Answers do not have to be simplifed unless asked by the question</li>
+                            <li>You have <strong>15 minutes per question</strong> and you are free to skip around</li>
+                            <li>Each question is worth <strong>nine points</strong></li>
+                            <li>You will answer questions in parts A, B , C and even D.</li>
+                            <li> [Tip] : <strong>You are advised to make up answers for parts you do not know the answer to.</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Limits Intro -->
     <div id="lim" style="background-color: #FAD3C9; padding:20px;"></div>
@@ -130,8 +187,6 @@
                     <div class="text">
                         <h3 class="label">Limits Notation</h3>
                         <p>$$\lim _{x\to c}f(x)=L$$</p>
-                        <h4>Limits at Infinity</h4>
-                        <p>$$\lim _{x\to 1}{\frac {x^{2}-1}{x-1}}=2$$</p>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -156,7 +211,7 @@
                     <div class="text">
                         <h3 class="label">Disguised Derivatives</h3>
                         <p>$$f'(a)=\lim _{h\to 0}{\frac {f(a+h)-f(a)}{h}}$$</p>
-                        <h4>Mathematical Definition</h4>
+                        <h3>Mathematical Definition</h3>
                         <p>$$m={\frac {\Delta f(a)}{\Delta a}}={\frac {f(a+h)-f(a)}{h}}$$</p>
                     </div>
                 </div>
@@ -201,7 +256,7 @@
     <div style="background-color: #000000; padding:20px;"></div>
 
     <div class="container-fluid" style="background-color:#000000; color:white">
-        <h1>For More Information <i class="fas fa-info-circle"></i></h1>
+        <h1><span style="font-family : Alfa Slab One, cursive">For More Information</span> <i class="fas fa-info-circle"></i></h1>
         <div class="row row-eq-height">
             <div class="col-md-6 left">
                 <div class="text">
@@ -210,8 +265,6 @@
                     <h6>Email <strong>jacksonw4481@hstat.org</strong> for more about APs in general</h6>
                     <br>
                     <h6>Email <strong>zhiyuanc1718@hstat.org</strong> for more about AP Calculus</h6>
-                    <br>
-                    <quote>Note : We do not encourage spam.</quote>
                 </div>
             </div>
             <div class="col-md-6 ">
