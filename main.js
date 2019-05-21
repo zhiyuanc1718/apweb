@@ -2,7 +2,7 @@ $(function() {
 
     //Add Quotes here
     var num = 0;
-    var quotes = ['"AP is overrated but ' + "that'" + 's why I like it."', '"Motivation is brief, but discipline is unyielding."',
+    var quotes = ['"AP is overrated"', '"Motivation is brief, but discipline is unyielding."',
         '"Your tower of knowledge will fall if you ' + "don't" + ' have a solid base."',
         '"Life is like riding a bicycle. To keep your balance you must keep moving."',
         '"Success is not final , failure is not fatal : it is the courage to continue that counts."',
