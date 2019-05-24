@@ -1,18 +1,28 @@
 var canvas;
-var x, y, w, h;
-var shapes = [];
+var w, h;
 var particles = [];
-const rate = 100; //rate of Shape spawn
+var time; //keeps track of the time when one math drawing is finished
+var coef = 2; //controls the coefficient of the math equation
+var theta = 0; //controls the angle limit, ranges from 0 to 2PI
+const func = ["sin((5/4) * d)", "(1/2) * (sin (3 * d) + pow(cos (5 * d), 2) + 0.3)",
+    "(1/5) * (pow(2.718281828459045, sin(d)) - 2 * cos(4 * d)  + pow((sin(2 * d - PI) / 24), 5))",
+    "sin(coef * d)", "cos(coef * d)"
+];
+var i = 0;
+var maxDeg = [];
 
 //responsive canvas
 function windowResized() {
     w = $('body').width();
     h = $('body').height();
     resizeCanvas(w, h);
+    theta = 0;
+    particles = [];
 }
 
-//define all variables and generate falling objects
+//defines all variables and generates falling objects
 function setup() {
+    maxDeg = [4 * TWO_PI, 2 * TWO_PI, 2 * TWO_PI, TWO_PI, TWO_PI];
     w = $('body').width();
     h = $('body').height();
     canvas = createCanvas(w, h);
@@ -24,11 +34,6 @@ function setup() {
     for (var i = 0; i < 20; i++) {
         particles.push(new particle(-h / 2, h / 2, 0, w));
     }
-}
-
-function Background() {
-    background(0);
-    particleB();
 }
 
 //white falling
@@ -63,15 +68,72 @@ function particleB() {
         }
     }
     for (var t = 0; t < particles.length; t++) {
-        particles[t].display()
-        particles[t].move()
+        particles[t].display();
+        particles[t].move();
         if (particles[t].y > h) {
-            particles.splice(t, 1)
+            particles.splice(t, 1);
         }
     }
 }
 
 function draw() {
-    Background();
-    stroke(0);
+    var r, x, y;
+    background(0);
+    particleB();
+    stroke(255);
+
+    //Controls Drawing Speed
+    if (frameCount % 480) {
+        if (theta < maxDeg[i]) {
+            theta += TWO_PI / 96
+            time = frameCount;
+        }
+    }
+
+    //One Drawing finished
+    if (theta > maxDeg[i]) {
+        if (frameCount - time > 60) {
+            if (i > 2) {
+                coef++;
+                if (coef > 9) {
+                    coef = 2;
+                    i++;
+                    if (i > 3) {
+                        i = 0;
+                    }
+                }
+            }
+            else {
+                i++;
+            }
+            theta = 0;
+        }
+    }
+
+    //draw shape with loop, max revolution 2PI
+    translate(w / 2, h / 2)
+    noFill()
+
+    polar(1);
+    if (i==2){
+        polar(1.1);
+        polar(1.4);
+        polar(1.6);
+    }
+
+}
+
+function polar (size){
+    beginShape();
+    for (var d = 0; d < theta; d += 0.01) {
+        r = (w / 5) * eval(func[i])
+        r*= size;
+        x = r * cos(d)
+        y = r * sin(d)
+        if (i == 0){
+            x*= -1
+        }
+        vertex(x, -y)
+    }
+    endShape()
 }
