@@ -11,6 +11,7 @@
 * Locate the Calc Folder and check by visiting the index.html
 * The index will show you an overview of the course 
 * You will see a link that redirects you to the other page with lessons on the course
+* Tip : Avoid opening console on the animating page because it will lag (right click is disabled for this reason)
 
 
 ## AP US HISTORY
