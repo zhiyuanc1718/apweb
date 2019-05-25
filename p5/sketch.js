@@ -16,13 +16,11 @@ function windowResized() {
     w = $('body').width();
     h = $('body').height();
     resizeCanvas(w, h);
-    theta = 0;
-    particles = [];
 }
 
 //defines all variables and generates falling objects
 function setup() {
-    maxDeg = [4 * TWO_PI, 2 * TWO_PI, 2 * TWO_PI, TWO_PI, TWO_PI];
+    maxDeg = [4 * TWO_PI, TWO_PI, 2 * TWO_PI, TWO_PI, TWO_PI];
     w = $('body').width();
     h = $('body').height();
     canvas = createCanvas(w, h);
@@ -62,7 +60,7 @@ function particle(y_min, y_max, x_min, x_max) {
 
 //activating falling animation and spawn new objects
 function particleB() {
-    if (frameCount % 60 == 0) {
+    if (frameCount % 120 == 0) {
         for (var i = 0; i < 10; i++) {
             particles.push(new particle(-h / 2, 0, 0, w));
         }
@@ -83,22 +81,21 @@ function draw() {
     stroke(255);
 
     //Controls Drawing Speed
-    if (frameCount % 480) {
-        if (theta < maxDeg[i]) {
-            theta += TWO_PI / 96
-            time = frameCount;
-        }
+    
+    if (theta < maxDeg[i] && (frameCount % 4 == 0)) {
+        theta += TWO_PI / 80
+        time = frameCount;
     }
 
     //One Drawing finished
-    if (theta > maxDeg[i]) {
-        if (frameCount - time > 60) {
+    if (theta >= maxDeg[i]) {
+        if (frameCount - time > 180) {
             if (i > 2) {
                 coef++;
                 if (coef > 9) {
                     coef = 2;
                     i++;
-                    if (i > 3) {
+                    if (i > 4) {
                         i = 0;
                     }
                 }
@@ -115,7 +112,7 @@ function draw() {
     noFill()
 
     polar(1);
-    if (i==2){
+    if (i == 2) {
         polar(1.1);
         polar(1.4);
         polar(1.6);
@@ -123,15 +120,20 @@ function draw() {
 
 }
 
-function polar (size){
+function polar(size) {
     beginShape();
     for (var d = 0; d < theta; d += 0.01) {
-        r = (w / 5) * eval(func[i])
-        r*= size;
+        r = eval(func[i])
+        if (w >= 992){
+            r *= w/6
+        }else{
+            r *= w/3
+        }
+        r *= size;
         x = r * cos(d)
         y = r * sin(d)
-        if (i == 0){
-            x*= -1
+        if (i == 0) {
+            x *= -1
         }
         vertex(x, -y)
     }
