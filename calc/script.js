@@ -1,8 +1,5 @@
 $(function() {
-    $("html").on("contextmenu",function(e){
-       return false;
-    }); 
-    
+   
     var hash = "";
     const l = $("#limits");
     const d = $("#dy");
@@ -68,7 +65,7 @@ $(function() {
     //idea repeated from common.js 
     $(document).on('click', 'a', function() {
         event.preventDefault();
-        var hash = this.hash;
+        hash = this.hash;
         $('html, body').animate({
             scrollTop: $(hash).offset().top + 1
         }, 800);

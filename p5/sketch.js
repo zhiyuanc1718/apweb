@@ -81,15 +81,14 @@ function draw() {
     stroke(255);
 
     //Controls Drawing Speed
-    
-    if (theta < maxDeg[i] && (frameCount % 4 == 0)) {
-        theta += TWO_PI / 80
+    if (theta < maxDeg[i] && frameCount % 3 == 0) {
+        theta += TWO_PI / 40
         time = frameCount;
     }
 
     //One Drawing finished
     if (theta >= maxDeg[i]) {
-        if (frameCount - time > 180) {
+        if (frameCount - time > 120) {
             if (i > 2) {
                 coef++;
                 if (coef > 9) {
@@ -124,10 +123,11 @@ function polar(size) {
     beginShape();
     for (var d = 0; d < theta; d += 0.01) {
         r = eval(func[i])
-        if (w >= 992){
-            r *= w/6
-        }else{
-            r *= w/3
+        if (w >= 992) {
+            r *= w / 6
+        }
+        else {
+            r *= w / 4
         }
         r *= size;
         x = r * cos(d)

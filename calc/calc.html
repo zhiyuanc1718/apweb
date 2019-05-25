@@ -25,7 +25,7 @@
     <!--P5.JS for animations-->
     <script src="../p5/p5.min.js"></script>
     <script src="../p5/addons/p5.dom.min.js"></script>
-    <script src="../p5/sketch.min.js"></script>
+    <script src="../p5/sketch.js"></script>
 
     <!-- Custom CSS Stylesheets -->
     <link rel="stylesheet" href="calc.css">
@@ -39,17 +39,17 @@
     <link rel="stylesheet" href="../common.css">
     
     <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Righteous|Special+Elite" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Righteous&display=swap" rel="stylesheet">
 
 </head>
 
 <style>
     h1{
-        font-family: "Righteous", cursive;
+        font-family: "Righteous", sans-serif, cursive;
     }
     
-    h3{
-        font-family: "Special Elite", cursive;
+    h3, h4{
+        font-family: "Anton", sans-serif, cursive;
     }
 </style>
 
@@ -61,17 +61,17 @@
             <div class="col-lg-4 display" > 
             <!--style="background-color:lightblue"-->
                 <div>
-                    <h1>Limits</h1>
+                    <h1>Derivatives</h1>
                     <br>
-                    <a class="btn btn-info limit" href="#scroll" role="button">Learn</a>
+                    <a class="btn btn-info dy" href="#scroll" role="button">Learn</a>
                 </div>
             </div>
             <div class="col-lg-4 display">
             <!--style="background-color: #E27D60"-->
                 <div>
-                    <h1>Derivatives</h1>
+                    <h1>Limits</h1>
                     <br>
-                    <a class="btn btn-info dy" href="#scroll" role="button">Learn</a>
+                    <a class="btn btn-info limit" href="#scroll" role="button">Learn</a>
                 </div>
             </div>
             <div class="col-lg-4 display">
@@ -135,7 +135,7 @@
             <div class="container">
                 <div class="row row-eq-height">
                     <div class="col-md-6">
-                        <h3><u>Direct Substitution</u></h3>
+                        <h3>Direct Substitution </h3>
                         <p class="equation">$$let\ f\left(x\right) = {\frac {x^{2}-1}{x-1}}$$</p>
                         <p class="equation">$$\lim _{x\to 3}f\left(x\right) =4$$</p>
                         <p>Read this as "The Limit as X approaches 3 for the function f(x)" </p>
@@ -150,7 +150,7 @@
                         <p>Note that when we simply plug in X = 1, we cannot divide by 0. We need to find another way to solve these limits.</p>
                     </div>
                     <div class="col-md-6">
-                        <h3><u>Limit by Factorization</u></h3>
+                        <h3>Limit by Factorization </h3>
                         <p class="equation">$$f\left(x\right) = {\frac {x^{2}-1}{x-1}}$$</p>
                         <p class="equation">$$\lim _{x\to 1}f\left(x\right) =2$$</p>
                         <p>How? Well, If you factor the numerator </p>
@@ -161,7 +161,7 @@
                         <quote><strong>Note</strong>: Always attempt to factor if possible</quote>
                     </div>
                     <div class="col-md-6">
-                        <h3><u>Limit using Trigonometry</u></h3>
+                        <h3>Limit using Trigonometry </h3>
                         <p class="equation">$$f\left(x\right) = {\frac {sin^{3}(x)cos(x)}{1-cos^{2}x}}$$</p>
                         <p class="equation">$$\lim _{x\to 0}f\left(x\right) = ?$$</p>
                         <p>Let's use direct substitution first and see what happens</p>
@@ -185,7 +185,7 @@
             <div class="container">
                 <div class="row row-eq-height">
                     <div class="col-md-6">
-                        <h3><u>Left Hand</u></h3>
+                        <h3>Left Hand </h3>
                         <p class="equation">$$let\ f\left(x\right) = {\frac {1}{x}}$$</p>
                         <p class="equation">$$\lim _{x\to 0^{-}}f\left(x\right)$$</p>
                         <p>The - sign next to the 0 indicates that we are looking at the limit from only the left side. As we move towards the x value from the left, what is the limit?</p>
@@ -193,13 +193,13 @@
                         <button type="button" class="btn btn-primary g2 gm" data-toggle="modal" data-target="#fx">Graph f(x)</button>
                     </div>
                     <div class="col-md-6">
-                        <h3><u>Right Hand</u></h3>
+                        <h3>Right Hand </h3>
                         <p class="equation">$$let\ f\left(x\right) = {\frac {1}{x}}$$</p>
                         <p class="equation">$$\lim _{x\to 0^{+}}f\left(x\right)$$</p>
                         <p>The + sign next to the 0 indicates that we are looking at the limit from only the right side. As we approach the x value from the right, what is the limit?</p>
                     </div>
                     <div class="col-md-6">
-                        <h3><u>Practice 1</u></h3>
+                        <h3>Practice 1 </h3>
                         <p class="equation">$$let\ g\left(x\right) = {\frac{x-2}{\left|x-2\right|}}$$</p>
                         <p class="equation">$$\lim _{x\to 2^{-}}g\left(x\right) = ?$$</p>
                         <p>Think about it and Checkout the Answer or Graph</p>
@@ -216,7 +216,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <h3><u>Practice 2</u></h3>
+                        <h3>Practice 2 </h3>
                         <p class="equation">$$let\ g\left(x\right) =\frac{x^2-4x}{\left|x-4\right|}$$</p>
                         <p class="equation">$$\lim _{x\to 4^{+}}g\left(x\right) = ?$$</p>
                         <p>Try to answer on your own</p>
@@ -328,7 +328,7 @@
             <div class="container">
                 <div class="row row-eq-height">
                     <div class="col-md-6">
-                        <h3><u>Disguised Derivatives</u></h3>
+                        <h3>Disguised Derivatives </h3>
                         <p><strong>Note</strong> : Before learning derivatives, go learn limits.</p>
                         <p><strong>Derivatives</strong> are slopes of tangent lines. The basic mathematical definition of a derivative is written in terms of limits:</p>
                         <h5>The <strong>Difference Quotient</strong></h5>
@@ -338,7 +338,7 @@
                             is the slope at one point. This can be done by drawing tangent lines, but we will calculate with calculus.</p>
                     </div>
                     <div class="col-md-6">
-                        <h3><u>First Derivative</u></h3>
+                        <h3>First Derivative </h3>
                         <p>You want to find the derivative (slope) of a standard parabola.</p>
                         <p class="equation">$$let\ q\left(x\right) = {x^{2}}$$</p>
                         <p>notation : d/dx means to take the derivative with respect to variable x</p>
@@ -348,7 +348,7 @@
                         <p>How is this useful? Well, if we are given any x value, we will know the slope at that point on the graph.</p>
                     </div>
                     <div class="col-md-6">
-                        <h3><u>Power Rule</u></h3>
+                        <h3>Power Rule </h3>
                         <p>Using the difference quotient, find t'(x)</p>
                         <p class="equation">$$let\ t\left(x\right) = {x^{10}}$$</p>
                         <p>You may go off foiling with such high exponent, but there's the power rule to do this derivative.</p>
@@ -358,7 +358,7 @@
                         <p class="equation">$$t'\left(x\right) = 10{x^{9}}$$</p>
                     </div>
                     <div class="col-md-6">
-                        <h3><u>Chain Rule</u></h3>
+                        <h3>Chain Rule </h3>
                         <p>The chain rule applies when multiple functions are contained within a single function such as cos(2x). The inside function is 2x and the outside function is cos().</p>
                         <p>You have to take the derivative of the inside and multiply it to the derivative of the outside with the inside unchanged.</p>
                         <p class="equation">$${\frac {d}{dx}}f\left(g\left(x\right)\right) = g'\left(x\right)f'\left(g\left(x\right)\right)$$</p>
@@ -367,7 +367,7 @@
                         <p class="equation">$$c'\left(x\right) = -sin({4x^{8}})32x^{7}$$</p>
                     </div>
                     <div class="col-md-6">
-                        <h3><u>Product Rule</u></h3>
+                        <h3>Product Rule </h3>
                         <p>The product rule applies when two functions are multiplied by one another. So in the case of 2xcos(x), 2x is its own function and cos(x) is its own function.</p>
                         <p class="equation">$$let\ p\left(x\right) = {x^{3}cos(x)} $$</p>
                         <p>Product Rule states that the derivative for multiplying functions is :</p>
@@ -375,7 +375,7 @@
                         <p class="equation">$$p'\left(x\right) = 3x^{2}cos(x) + (x^{3})(-sin(x))$$</p>
                     </div>
                     <div class="col-md-6">
-                        <h3><u>Quotient Rule</u></h3>
+                        <h3>Quotient Rule </h3>
                         <p>The quotient rule is similar to the product rule but mainly used when two functions divide such as (2x)/Cos(x).</p>
                         <p class="equation">$$let\ Q\left(x\right) = {\frac {sin(x)}{cos(x)} = tan(x)} $$</p>
                         <p>Quotient Rule states that the derivative for dividing functions is :</p>
@@ -579,13 +579,13 @@
             <div class="container">
                 <div class="row row-eq-height">
                     <div class="col-md-6">
-                        <h3><u>Intro to Integrals</u></h3>
+                        <h3>Intro to Integrals </h3>
                         <p>The goal of using integrals is to find the area under a curve.</p>
                         <p>Integration is the opposite of differentiation. With derivatives, you find the slope. Integrals take the area between curves and lines and are capable of producing the original function that was differentiated.</p>
                         <p>There are several basic ways to solve integrals, so lets explore!</p>
                     </div>
                     <div class="col-md-6">
-                        <h3><u>Anti-Derivatives</u></h3>
+                        <h3>Anti-Derivatives </h3>
                         <p>Antiderivative (Indefinite Integrals) : Finding the original function given the derivative. These involve some memorization of the original function and its derivative such as seeing 2x as the derivative should remind you that
                             the original function or the antiderivative is the quadratic x squared.</p>
                         <p class="equation">$${\frac {d}{dx}}{x^{2}} = 2x \ \ vs \int 2x\,dx = x^{2}$$</p>
@@ -594,7 +594,7 @@
                         <p class="equation">$$\int cos(x)\,dx = sin(x)$$</p>
                     </div>
                     <div class="col-md-6">
-                        <h3><u>Plus C</u></h3>
+                        <h3>Plus C </h3>
                         <p>When you take the indefinite integral of a function, you should add + C [for constant] to your answer</p>
                         <p>When taking the derivative of a function, all constants are differentiated and they become 0 (power rule).</p>
                         <p>Therefore, doing the opposite means that you will produce a constant value for which you don't know what it is (as of now).</p>
@@ -603,7 +603,7 @@
                         <p class="equation">$$\int cos(x)\,dx = sin(x) + C$$</p>
                     </div>
                     <div class="col-md-6">
-                        <h3><u>Definite Integrals</u></h3>
+                        <h3>Definite Integrals </h3>
                         <p>Remember that integrals find the area under a curve, well now we will do some math.</p>
                         <p class="equation">$$find \ \int _{1}^{4}2x\,dx$$</p>
                         <p>The 1 and 4 represents the limits (not that limit) or the bounds of the integral. Basically, we are saying that we want the area under the curve from x = 1 to x = 4 for this function 2x</p>
@@ -613,7 +613,7 @@
                     </div>
 
                     <div class="col-md-6">
-                        <h3><u>Anti-Power Rule</u></h3>
+                        <h3>Anti-Power Rule </h3>
                         <p>Remember how power rule works with derivatives?</p>
                         <p>Now we are doing the opposite.</p>
                         <p>The opposite of subtracting is adding, and the opposite of multiplying is dividing.</p>
@@ -622,7 +622,7 @@
                         <p>Mastering this method will allow you to tackle an Integral's chain rule.</p>
                     </div>
                     <div class="col-md-6">
-                        <h3><u>Chain Rule (U Substitution)</u></h3>
+                        <h3>Chain Rule (U Substitution) </h3>
                         <p>When we take a derivative for a composite function, we have the derivative of the inside function multiplied by the outside's derivative with the inside unchanged.</p>
                         <p>Doing the chain rule for integration is a bit tricky and the substitution rule comes into play.</p>
                         <p class="equation">$$find \ \int (2x)^{2}\,dx$$</p>
@@ -650,7 +650,7 @@
             <div class="container">
                 <div class="row row-eq-height">
                     <div class="col-md-6">
-                        <h3><u>Definition</u></h3>
+                        <h3>Definition </h3>
                         <p>The Fundamental Theorem of Calculus is a theorem that links the concept of differentiating a function with the concept of integrating a function. The theorem is separated into two parts.</p>
                         <p>If f is continuous on [a, b], then the function</p>
                         <p class="equation">$$F(x)=\int _{a}^{x}\!f(t)\,dt.$$</p>
@@ -660,7 +660,7 @@
                         <p class="equation">$$\int _{a}^{b}f(x)\,dx=F(b)-F(a)$$</p>
                     </div>
                     <div class="col-md-6">
-                        <h3><u>Mean Value Theorem</u></h3>
+                        <h3>Mean Value Theorem </h3>
                         <p>The MVT for integrals finds the average value of the function over an interval</p>
                         <p class="equation">$$ {\frac {1}{b-a}} \int _{a}^{b}f(x)\,dx={\frac {F(b)-F(a)}{b-a}}.$$</p>
                         <p>where F(x) is the integral of f(x). This essentially finds the average value of f(x) similar to how the slope formula finds the average rate of change.</p>
@@ -685,11 +685,11 @@
         <!--    <div class="container">-->
         <!--        <div class="row row-eq-height">-->
         <!--            <div class="col-md-6">-->
-        <!--                <h3><u>Intro to Integrals</u></h3>-->
+        <!--                <h3> Intro to Integrals </h3>-->
 
         <!--            </div>-->
         <!--            <div class="col-md-6">-->
-        <!--                <h3><u>Anti-Derivatives</u></h3>-->
+        <!--                <h3> Anti-Derivatives </h3>-->
 
         <!--            </div>-->
         <!--        </div>-->
@@ -705,11 +705,11 @@
         <!--    <div class="container">-->
         <!--        <div class="row row-eq-height">-->
         <!--            <div class="col-md-6">-->
-        <!--                <h3><u>Intro to Integrals</u></h3>-->
+        <!--                <h3> Intro to Integrals </h3>-->
 
         <!--            </div>-->
         <!--            <div class="col-md-6">-->
-        <!--                <h3><u>Anti-Derivatives</u></h3>-->
+        <!--                <h3> Anti-Derivatives </h3>-->
 
         <!--            </div>-->
         <!--        </div>-->
