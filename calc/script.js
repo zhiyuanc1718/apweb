@@ -1,5 +1,8 @@
 $(function() {
-
+    $("html").on("contextmenu",function(e){
+       return false;
+    }); 
+    
     var hash = "";
     const l = $("#limits");
     const d = $("#dy");
