@@ -19,7 +19,7 @@ $(function() {
     timefunction();
     setInterval(function() {
         timefunction();
-    }, 7000);
+    }, 5000);
 
     function timefunction(){
         num++;
@@ -27,7 +27,6 @@ $(function() {
             num = 1;
         }
         changeContent();
-        $('.quote,.name,.describe').fadeIn(2000).delay(3000).fadeOut(2000);
     }
 
     function changeContent() {
