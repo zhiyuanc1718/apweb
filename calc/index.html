@@ -31,29 +31,23 @@
     <script src="../common.js"></script>
 
     <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Righteous|Yeon+Sung" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Righteous" rel="stylesheet">
+
 </head>
 
 <style>
-    .left {
-        border-right: 1px solid white;
-    }
-    
-    h1{
-        font-family : "Righteous", cursive;
-    }
-    
-    h3{
-        font-family: 'Yeon Sung', cursive;
-    }
-    
-    @media (max-width: 768px){
-        .left{
-            border-right: 0px;
-        }
+    h1,
+    h3 {
+        font-family: "Righteous", cursive;
     }
 
+    .container-fluid {
+        color: black;
+    }
+
+    p {
+        text-align: left;
+    }
 </style>
 
 <body data-spy="scroll" data-target=".navbar">
@@ -87,8 +81,7 @@
     </header>
 
     <!-- course description -->
-    <div id="exam" style="background-color: #FFDECB; padding:20px;"></div>
-    <div class="container-fluid" style="background-color: #FFDECB"><br>
+    <div id="exam" class="container-fluid" style="background-color: #0468BF; color:white; padding-top:20px;"><br>
         <div class="primary-label">
             <h1>Course Description</h1>
         </div>
@@ -99,9 +92,9 @@
                         <h3 class="label">Prerequisite <i class="fas fa-check-square"></i></h3>
                         <p>AP Calculus requires you to understand concepts across geometry, algebra and trigonometry. You should memorize the unit circle and formulas of different shapes (spheres, trapezoids etc).</p>
                         <ul class="list">
-                            <li>Surface Areas</li>
-                            <li>Areas</li>
-                            <li>Volumes</li>
+                            <li>Surface Areas of 3D shapes</li>
+                            <li>Areas of trapezoids, triangles & etc </li>
+                            <li>Volumes and Trigonometry Identities</li>
                         </ul>
                     </div>
                 </div>
@@ -110,7 +103,7 @@
                         <h3 class="label">AP Exam <i class="fas fa-pencil-alt"></i></h3>
                         <p>The exam is given within the first weeks of May. You have September to May to prepare for this exam. Receiving a passing score on the exam might give you college credits. Scores range from 1 to 5. A 3 is considered a passing score.</p>
                         <ul class="list">
-                            <li><strong>2019 May 14 Tuesday</strong> Exam</li>
+                            <li style="text-decoration : line-through"><strong>2019 May 14 Tuesday</strong> Exam</li>
                             <li><strong>2020 May 5 Tuesday</strong> Exam</li>
                         </ul>
                     </div>
@@ -118,14 +111,13 @@
             </div>
         </div>
     </div>
-    
+
     <!--AP EXAM Format-->
-    <div id="format"></div>
-    <div class="container-fluid" style="background-color: #CAE5FF; padding: 50px 0px 20px 0px;">
+    <div id="format" class="container-fluid" style="background-color: #22A2F2; padding: 20px 0px 20px 0px;"><br>
         <div class="primary-label">
             <h1>AP Exam Format <i class="fas fa-scroll"></i></h1>
         </div>
-        <p>The AP Calculus AB Exam is 3 hours and 15 minutes long and has a 2 multiple choice sections and 2 free response sections.</p>
+        <p style="text-align: center">The AP Calculus AB Exam is 3 hours and 15 minutes long and has a 2 multiple choice sections and 2 free response sections.</p>
         <div class="container">
             <div class="row row-eq-height">
                 <!--Section I-->
@@ -135,17 +127,14 @@
                         <ul class="list">
                             <li>Question topics range from limits to integrals.</li>
                             <li>You have to do all math without a calculator.</li>
-                            <li>You have <strong>two minutes per question</strong> so
-                             it is <strong>NOT</strong> recommended that you spend more than 2 minutes on a question</li>
-                            <li>It is reasonable to say that difficulty increases as you proceed towards the end. 
-                            However, this is not confirmed to be true, so skip around questions as you wish.</li>
+                            <li>You have <strong>two minutes per question</strong> so it is <strong>NOT</strong> recommended that you spend more than 2 minutes on a question</li>
+                            <li>It is reasonable to say that difficulty increases as you proceed towards the end. However, this is not confirmed to be true, so skip around questions as you wish.</li>
                         </ul>
                         <p><strong>Section I — Part B:</strong> Multiple Choice | 15 Questions | 45 minutes | Calculator | 16.7% of Exam Score</p>
                         <ul class="list">
                             <li>Question topics range from finding derivatives to integrals</li>
                             <li>You may not require the calculator for some questions.</li>
-                            <li>Because you have <strong>three minutes per question</strong>, you will
-                            feel less stressed out on this section if you proceed at regular pace.</li>
+                            <li>Because you have <strong>three minutes per question</strong>, you will feel less stressed out on this section if you proceed at regular pace.</li>
                         </ul>
                     </div>
                 </div>
@@ -176,13 +165,26 @@
     </div>
 
     <!-- Limits Intro -->
-    <div id="lim" style="background-color: #FAD3C9; padding:20px;"></div>
-    <div class="container-fluid" style="background-color: #FAD3C9;">&nbsp
+    <div id="lim" class="container-fluid" style="background-color: #52B5F2; padding: 20px 0px 20px 0px;"><br>
         <div class="primary-label">
             <h1>Limits</h1>
         </div>
         <div class="container">
             <div class="row row-eq-height">
+                <div class="col-md-6" style="margin-bottom: 0px">
+                    <div class="text">
+                        <h3 class="label">Difficulty</h3>
+                        <h5><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star">
+                        </i><i class="far fa-star"></i><i class="far fa-star"></i></h5>
+                    </div>
+                </div>
+                <div class="col-md-6" style="margin-bottom: 0px">
+                    <div class="text">
+                        <h3 class="label">Exam Emphasis</h3>
+                        <h5><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star">
+                        </i><i class="far fa-star"></i></h5>
+                    </div>
+                </div>
                 <div class="col-md-6">
                     <div class="text">
                         <h3 class="label">Limits Notation</h3>
@@ -193,6 +195,7 @@
                     <div class="text">
                         <h3 class="label">What exactly are Limits <i class="fas fa-question"></i></h3>
                         <p>The general idea of a limit is the y value that a function approaches when it approaches a certain x value. This is the expected y value for a function, the value does not have to be defined.</p>
+                        <a href="calc.html" class="btn btn-dark">Begin Learning <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -200,13 +203,25 @@
     </div>
 
     <!-- Derivatives Intro -->
-    <div id="dy" style="background-color: #CAE5FF; padding:20px;"></div>
-    <div class="container-fluid" style="background-color: #CAE5FF">&nbsp
+    <div id="dy" class="container-fluid" style="background-color: #6BCCF2; padding: 20px 0px 20px 0px;"><br>
         <div class="primary-label">
             <h1>Derivatives</h1>
         </div>
         <div class="container">
             <div class="row row-eq-height">
+                <div class="col-md-6" style="margin-bottom: 0px">
+                    <div class="text">
+                        <h3 class="label">Difficulty</h3>
+                        <h5><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></h5>
+                    </div>
+                </div>
+                <div class="col-md-6" style="margin-bottom: 0px">
+                    <div class="text">
+                        <h3 class="label">Exam Emphasis</h3>
+                        <h5><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt">
+                        </i><i class="far fa-star"></i></h5>
+                    </div>
+                </div>
                 <div class="col-md-6">
                     <div class="text">
                         <h3 class="label">Disguised Derivatives</h3>
@@ -220,6 +235,7 @@
                         <h3 class="label">What are Derivatives <i class="fas fa-question"></i></h3>
                         <p>The slope of the Tangent line at a specific point is called the derivative. In other words, it is the rate of change at an instantaneous moment. Unlike the average rate of change between two points on a graph, finding the slope
                             at one point requires more work, and this is why we need to learn some calculus to find the value.</p>
+                        <a href="calc.html" class="btn btn-dark">Begin Learning <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -227,58 +243,47 @@
     </div>
 
     <!-- Integrals Intro -->
-    <div id="int" style="background-color: #FAD3C9; padding:20px;"></div>
-    <div class="container-fluid" style="background-color: #FAD3C9">&nbsp
+    <div id="int" class="container-fluid" style="background-color: #91E0F2; padding: 20px 0px 20px 0px;"><br>
         <div class="primary-label">
             <h1>Integrals</h1>
         </div>
         <div class="container">
             <div class="row row-eq-height">
+                <div class="col-md-6" style="margin-bottom: 0px">
+                    <div class="text">
+                        <h3 class="label">Difficulty</h3>
+                        <h5><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star">
+                        </i><i class="fas fa-star-half-alt"></i></h5>
+                    </div>
+                </div>
+                <div class="col-md-6" style="margin-bottom: 0px">
+                    <div class="text">
+                        <h3 class="label">Exam Emphasis</h3>
+                        <h5><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star">
+                        </i><i class="fas fa-star"></i></h5>
+                    </div>
+                </div>
                 <div class="col-md-6">
                     <div class="text">
                         <h3 class="label">General Integral</h3>
                         <p>$${\displaystyle \int _{a}^{b}\,f(x)dx=\left[F(x)\right]_{a}^{b}=F(b)-F(a)\,}$$</p>
+                        <h3 class="label">Mathematical Definition</h3>
+                        <p>$$\int _{a}^{b}f(x)\,dx = \lim _{n \to \infty}\sum _{i=1}^{n}f(x_{i}^{*})\,\Delta x_{i} $$</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="text">
-                        <h3 class="label">How are Integrals different <i class="fas fa-question"></i></h3>
-                        <p>Integrals help us determine the area under a curve. While derivatives find the change, integrals are antiderivatives: they find what was being differentiated. These terms might sound fancy or confusing but Calculus is here to help
-                            you understand.</p>
+                        <h3 class="label">What are Integrals <i class="fas fa-question"></i></h3>
+                        <p>Integrals help us determine the area under a curve. While derivatives find the change, integrals are antiderivatives: they find what was being differentiated. These terms might sound fancy or confusing, but Calculus is here to
+                            help you understand.</p>
+                        <p>In a non-calculus based physics class, kinematics equations depend on constant acceleration. What if acceleration is not constant, then what is the displacement of the particle in motion over a time interval?</p>
+                        <a href="calc.html" class="btn btn-dark">Begin Learning <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- More Information -->
-
-    <div style="background-color: #000000; padding:20px;"></div>
-
-    <div class="container-fluid" style="background-color:#000000; color:white">
-        <h1><span style="font-family : Alfa Slab One, cursive">For More Information</span> <i class="fas fa-info-circle"></i></h1>
-        <div class="row row-eq-height">
-            <div class="col-md-6 left">
-                <div class="text">
-                    <h2>Contact Us <i class="fas fa-at"></i></h2>
-                    <br>
-                    <h6>Email <strong>jacksonw4481@hstat.org</strong> for more about APs in general</h6>
-                    <br>
-                    <h6>Email <strong>zhiyuanc1718@hstat.org</strong> for more about AP Calculus</h6>
-                </div>
-            </div>
-            <div class="col-md-6 ">
-                <div class="text">
-                    <h2>Read More <i class="fab fa-readme"></i></h2>
-                    <br>
-                    <h4>Get Excited to Learn More</h4>
-                    <br>
-                    <quote>All About Calculus AB</quote>
-                    <a href="calc.html">Click Here</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Footer -->
     <footer class="bg-light py-4">
