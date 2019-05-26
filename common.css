@@ -95,7 +95,7 @@ img {
 
 @media (max-width: 568px) {
     h1 {
-        font-size: 30px !important;
+        font-size: 35px;
     }
     h2 {
         font-size: 25px;

@@ -27,9 +27,6 @@ p {
     .display {
         height: 100%;
     }
-    .primary-label>h1 {
-        font-size: 40px !important;
-    }
 }
 
 @media (max-width: 768px) {
@@ -87,10 +84,6 @@ p {
 
 .modal-body>p {
     text-align: left;
-}
-
-.primary-label>h1 {
-    font-size: 30px;
 }
 
 .equation {
