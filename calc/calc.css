@@ -1,8 +1,8 @@
 /*Overview Page CSS*/
 
 #main {
-    background: linear-gradient( rgba(0, 0, 200, 0.2),
-    rgba(0, 0, 255, 0.4)), url('../img/cal1.jpg') no-repeat center;
+    background: linear-gradient( rgba(0, 100, 200, 0.2),
+    rgba(0, 50, 255, 0.3)), url('../img/cal1.jpg') no-repeat center; 
     background-size: contain;
 }
 
