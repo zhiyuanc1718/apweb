@@ -4,8 +4,9 @@ var particles = [];
 var time; //keeps track of the time when one math drawing is finished
 var coef = 2; //controls the coefficient of the math equation
 var theta = 0; //controls the angle limit, ranges from 0 to 2PI
+const e = 2.718281828459045 //Euler's number
 const func = ["sin((5/4) * d)", "(1/2) * (sin (3 * d) + pow(cos (5 * d), 2) + 0.3)",
-    "(1/5) * (pow(2.718281828459045, sin(d)) - 2 * cos(4 * d)  + pow((sin(2 * d - PI) / 24), 5))",
+    "(1/5) * (pow(e, sin(d)) - 2 * cos(4 * d)  + pow((sin(2 * d - PI) / 24), 5))",
     "sin(coef * d)", "cos(coef * d)"
 ];
 var i = 0;
@@ -27,8 +28,6 @@ function setup() {
     canvas.position(0, 0);
     canvas.style("z-index", "-1");
     canvas.style('display', 'block');
-    x = w;
-    y = 4 * h / 5;
     for (var i = 0; i < 20; i++) {
         particles.push(new particle(-h / 2, h / 2, 0, w));
     }
@@ -80,14 +79,16 @@ function draw() {
     particleB();
     stroke(255);
 
-    //Controls Drawing Speed
-    if (theta < maxDeg[i] && frameCount % 8 == 0) {
-        theta += TWO_PI / 40
+    //Controls Drawing Progress
+    if (theta < maxDeg[i] && w >= 992 - 15) {
+        theta += TWO_PI / 60
+        
+        //for cooldown
         time = frameCount;
     }
 
-    //One Drawing finished
-    if (theta >= maxDeg[i]) {
+    //One Drawing finished, proceed to next
+    if (theta >= maxDeg[i] && w>= 992-15) {
         if (frameCount - time > 120) {
             if (i > 2) {
                 coef++;
@@ -110,11 +111,13 @@ function draw() {
     translate(w / 2, h / 2)
     noFill()
 
-    polar(1);
-    if (i == 2) {
-        polar(1.1);
-        polar(1.4);
-        polar(1.6);
+    if (w >= 992-15) {
+        polar(1);
+        if (i == 2) {
+            polar(1.1);
+            polar(1.4);
+            polar(1.6);
+        }
     }
 
 }
