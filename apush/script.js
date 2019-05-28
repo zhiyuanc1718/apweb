@@ -42,13 +42,13 @@ $(function() {
     });
 
     //AP Period Selector : content Fade in & out
-    $(document).on("click", ".controller", function() {
+    $(document).on("click touchstart", ".controller", function() {
         // Get the current APUSH Period and fade it out
         var strArray = $("#periods").html().split("Period ")
         var periodNum = strArray[1].substring(0, 1)
         var newNum = periodNum;
         // This IF Statement checks if the controller is PLUS or MINUS
-        if ($(this).hasClass('fa-plus-circle')) {
+        if ($(this).hasClass('fa-chevron-circle-right')) {
             newNum++;
             if (newNum > 9) {
                 newNum = 1;
