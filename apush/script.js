@@ -62,8 +62,8 @@ $(function() {
         }
         $("#pd" + (periodNum)).fadeOut("slow", function() {
             $("#pd" + newNum).fadeIn(1000)
-            $("#periods").html('<i class="fas fa-minus-circle controller"></i> Period ' + newNum +
-            ' <i class="fas fa-plus-circle controller"></i>');
+            $("#periods").html('<i class="fas fa-chevron-circle-left controller"></i> Period ' + newNum +
+            ' <i class="fas fa-chevron-circle-right controller"></i>');
         });
     });
 });
