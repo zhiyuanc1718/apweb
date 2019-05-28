@@ -50,29 +50,15 @@ img {
     margin: 30px 5px 10px 5px;
 }
 
+.center>h1 {
+    font-size: 8vw;
+}
+
 /* Add on to a Ul class containing li(s) */
 
 .list {
     text-align: left;
     display: inline-block;
-}
-
-@media (max-width: 992px) {
-    .center>h1 {
-        font-size: 6.5vw;
-    }
-    .holder>h1 {
-        font-size: 6vw;
-    }
-}
-
-@media (min-width: 992px) {
-    .center>h1 {
-        font-size: 8vw;
-    }
-    .holder>h1 {
-        font-size: 70px;
-    }
 }
 
 @media (max-width: 768px) {
