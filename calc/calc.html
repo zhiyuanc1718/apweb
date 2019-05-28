@@ -33,22 +33,23 @@
 
     <!-- JS -->
     <script src="script.js"></script>
-    
+
 
     <!--The common file removes repeated css/js -->
     <link rel="stylesheet" href="../common.css">
-    
+
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Anton|Righteous&display=swap" rel="stylesheet">
 
 </head>
 
 <style>
-    h1{
+    h1 {
         font-family: "Righteous", sans-serif, cursive;
     }
-    
-    h3, h4{
+
+    h3,
+    h4 {
         font-family: "Anton", sans-serif, cursive;
     }
 </style>
@@ -58,8 +59,8 @@
     <!------------ centered main page background image -------->
     <div class="container-fluid" style="height:100%;" id="Main">
         <div class="row" style="height:100%; color:white">
-            <div class="col-lg-4 display" > 
-            <!--style="background-color:lightblue"-->
+            <div class="col-lg-4 display">
+                <!--style="background-color:lightblue"-->
                 <div>
                     <h1>Derivatives</h1>
                     <br>
@@ -67,7 +68,7 @@
                 </div>
             </div>
             <div class="col-lg-4 display">
-            <!--style="background-color: #E27D60"-->
+                <!--style="background-color: #E27D60"-->
                 <div>
                     <h1>Limits</h1>
                     <br>
@@ -75,7 +76,7 @@
                 </div>
             </div>
             <div class="col-lg-4 display">
-            <!--style="background-color: #F3EEC3"-->
+                <!--style="background-color: #F3EEC3"-->
                 <div>
                     <h1>Integrals</h1>
                     <!--<h3 class="equation">$${\displaystyle x(b)-x(a)=\int _{a}^{b}v(t)\,dt}$$</h3>-->
@@ -312,6 +313,19 @@
                         <p>Jump discontinuity : The function from the left approaches a different limit compared to the right hand’s limit. </p>
                         <button type="button" class="btn btn-primary g6 gm" data-toggle="modal" data-target="#fx">Example 1</button>
                         <button type="button" class="btn btn-primary g7 gm" data-toggle="modal" data-target="#fx">Example 2</button>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Extreme Value Theorem</h4>
+                        <p>This theorem essentially states that a continous function will have an <strong>absolute maximum and minimum</strong></p>
+                        <p>Basically, within an interval of x values, as long as for all x values, f(x) is defined and continous,
+                        we can guarantee that we will have the highest and lowest Y-value within the interval (a,b) </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Intermediate Value Theorem</h4>
+                        <p>This theorem essentially states that a continous function will have a intermediate value between two Y values.</p>
+                        <p>In simpler terms, if F(1) = 5 and F(3) = 10, then between x = 1 and x = 3</p>
+                        <p>there must exist a x value for which f(x) = 7 because 7 is in between of 5 and 10, and we know to get to 10 from 5, you need to go pass 7.</p>
+                        <p class="equation">$$f\left(a\right) = 2 \\ f\left(b\right) = 5 \\ f\left(c\right) = 5 ≥ y ≥ 2$$</p>
                     </div>
                 </div>
             </div>
@@ -550,18 +564,17 @@
             <div class="container">
                 <div class="row row-eq-height">
                     <div class="col-md-6">
-                        <h4>Intermediate Vaule Theorem</h4>
-                        <p>This theorem essentially states that a continous function will have a intermediate value between two Y values.</p>
-                        <p>In simpler terms, if F(1) = 5 and F(3) = 10, then between x = 1 and x = 3</p>
-                        <p>there must exist a x value for which f(x) = 7 because 7 is in between of 5 and 10, and we know to get to 10 from 5, you need to go pass 7.</p>
-                        <p class="equation">$$f\left(a\right) = 2 \\ f\left(b\right) = 5 \\ f\left(c\right) = 5 ≥ y ≥ 2$$</p>
-                    </div>
-                    <div class="col-md-6">
                         <h4>Mean Value Theorem</h4>
                         <p>This theorem requires a function to be differentiable. MVT guarantees that a function will have a point between two points such that the point's derivative (slope) is equal to the average rate of change of the two points.</p>
-                        <p></p>
                         <p class="equation">$${\frac {f\left(a\right) - f\left(b\right)}{a-b}} = f'\left(c\right)$$</p>
                         <p>In simple terms, this defines that there exist a point between two points where its instantaneous slope is equal to the average rate of change for a differentiable function.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Rolle's Theorem</h4>
+                        <p>This theorem is another form of MVT and guarantees that a function will have a point with a derivative of 0. In simpler terms, if F(0) = 5 and F(10) = 5, then between x = 0 and x = 10</p>
+                        <p>there must exist a x value for which f'(x) = 0 because the average rate of change is 0. We are dividing 5 - 5 over 10 - 0 (slope formula)</p>
+                        <p class="equation">$$f\left(a\right) = f\left(b\right)$$</p>
+                        <p class="equation">$$ {\frac {f\left(a\right) - f\left(b\right)}{a-b}} = f'\left(c\right) = 0$$</p>
                     </div>
                 </div>
             </div>
@@ -645,13 +658,13 @@
         <hr id="iu2" style="visibility:hidden;">
         <div class="container-fluid">
             <div class="primary-label">
-                <h1 class="jumbotron" style="background-color: #659BDB">FTC</h1>
+                <h1 class="jumbotron" style="background-color: #659BDB">Fundamentals</h1>
             </div>
             <div class="container">
                 <div class="row row-eq-height">
                     <div class="col-md-6">
                         <h3>Definition </h3>
-                        <p>The Fundamental Theorem of Calculus is a theorem that links the concept of differentiating a function with the concept of integrating a function. The theorem is separated into two parts.</p>
+                        <p>The <strong>Fundamental Theorem of Calculus</strong> is a theorem that links the concept of differentiating a function with the concept of integrating a function. The theorem is separated into two parts.</p>
                         <p>If f is continuous on [a, b], then the function</p>
                         <p class="equation">$$F(x)=\int _{a}^{x}\!f(t)\,dt.$$</p>
                         <p>will have a derivative on the interval such that</p>
