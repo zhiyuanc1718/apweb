@@ -81,7 +81,7 @@ function draw() {
     stroke(255);
 
     //Controls Drawing Speed
-    if (theta < maxDeg[i] && frameCount % 3 == 0) {
+    if (theta < maxDeg[i] && frameCount % 8 == 0) {
         theta += TWO_PI / 40
         time = frameCount;
     }
