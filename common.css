@@ -62,18 +62,22 @@ img {
 }
 
 @media (max-width: 768px) {
-    .col-md-6 {
+    .col-md-6, .col-md-4 {
         margin-bottom: 5px;
         padding: 10px;
     }
     .primary-label {
-        padding: 20px 5px 10px 5px !important;
-        margin: 20px 5px 10px 5px !important;
+        padding: 20px 5px 10px 5px;
+        margin: 20px 5px 10px 5px ;
+    }
+    .label {
+        margin-top: 0px;
+        padding-top: 0px;
     }
 }
 
 @media (min-width:768px) {
-    .col-md-6 {
+    .col-md-6, .col-md-4 {
         margin-bottom: 15px;
         padding: 20px;
     }
@@ -89,18 +93,10 @@ img {
     .controller {
         font-size: 35px;
     }
-}
-
-@media (max-width: 475px) {
-    .label {
-        margin-top: 0px !important;
-        padding-top: 0px !important;
-    }
     .primary-label {
-        padding: 10px!important;
-        margin: 0px;
+        padding: 10px;
         margin-bottom: 0px;
-        margin-top: 30px !important;
+        margin-top: 40px;
     }
 }
 
